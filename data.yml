@@ -73,13 +73,37 @@ categories:
       - name: "Agents and automation"
         items: []
       - name: "Conversational AI"
-        items: []
+        items:
+          - name: "Chatberry"
+            description: "WhatsApp marketing and automation platform on the official WhatsApp API, with an AI chatbot that answers customer questions and sales inquiries."
+            homepage_url: https://chatberry.net
+            logo: chatberry.svg
+            extra:
+              annotations:
+                presence: hq
+                city: "Beirut"
+                founded: "2024"
+                verified_by: public-sources
+                verified_on: "2026-10-30"
+                confidence: medium
       - name: "Developer tools"
         items: []
   - name: "Applied AI"
     subcategories:
       - name: "Fintech and banking"
-        items: []
+        items:
+          - name: "Slideit"
+            description: "Buy now, pay later app for Lebanese shoppers and merchants, approving customers with Credit Brain, its AI underwriting system built on local data."
+            homepage_url: https://slideitapp.com
+            logo: slideit.svg
+            extra:
+              annotations:
+                presence: hq
+                city: "Beirut"
+                founded: "2025"
+                verified_by: public-sources
+                verified_on: "2026-10-30"
+                confidence: medium
       - name: "Health and life sciences"
         items: []
       - name: "Education"
