@@ -193,7 +193,19 @@ categories:
                 verified_on: "2026-10-30"
                 confidence: medium
       - name: "Cybersecurity"
-        items: []
+        items:
+          - name: "Chimera Cybersecurity"
+            description: "Plug-and-play network security appliance for SMBs combining detection and response, firewall and vulnerability scanning with edge AI."
+            homepage_url: https://www.chimerasec.com
+            logo: chimera-cybersecurity.svg
+            extra:
+              annotations:
+                presence: team
+                city: "Beirut"
+                founded: "2024"
+                verified_by: public-sources
+                verified_on: "2026-10-30"
+                confidence: medium
   - name: "Research and academia"
     subcategories:
       - name: "Universities"
@@ -586,6 +598,18 @@ categories:
                 presence: diaspora
                 city: "Sunnyvale"
                 founded: "2016"
+                verified_by: public-sources
+                verified_on: "2026-10-30"
+                confidence: medium
+          - name: "Torg"
+            description: "AI-powered sourcing platform that matches food and beverage buyers with verified suppliers in Europe. Berlin-based; co-founded by Rita Kerbaj."
+            homepage_url: https://usetorg.com
+            logo: torg.svg
+            extra:
+              annotations:
+                presence: diaspora
+                city: "Berlin"
+                founded: "2022"
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: medium
