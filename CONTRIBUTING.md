@@ -13,13 +13,18 @@ Both need a free GitHub account. Every change lands as a reviewed commit.
 
 | Entity type | Qualifies when | Evidence we need |
 | --- | --- | --- |
-| Company in Lebanon | AI is core to a live product or service customers can use today; headquartered in Lebanon or runs a working team there (at least 3 full-time people) | Public product page; Lebanese registration or a team visible on public profiles |
+| Company in Lebanon | AI is the product, not one feature of it, and customers can use it today; headquartered in Lebanon or runs a working team there (at least 3 full-time people) | Public product page; Lebanese registration or a team visible on public profiles |
 | Diaspora company | Same product bar; at least one Lebanese founder or co-founder; headquarters and team abroad | Public product page; founder's public profile |
+| Open-source project | AI is what the project does; created by Lebanese people, wherever they are based | Public repository; the creators' public profiles |
 | Research | University lab or research center with AI research output in the last 24 months | Publications, funded projects, or released code |
 | Investor | At least one investment in an AI company that qualifies above | Portfolio page or announcement |
 | Accelerator or incubator | At least one AI company in a cohort in the last 24 months | Cohort page or announcement |
 | Community or nonprofit | AI events or programs held in the last 12 months | Event pages or posts |
 | Government body | A formal AI mandate or program | Official page or decree |
+
+**Acquired companies** qualify on the same terms as any other company while the product stays live. The description names the acquirer.
+
+**Open-source projects** go in the subcategory that matches what they do, next to companies.
 
 **Out of scope:** agencies and consultancies selling AI services without a product, resellers of foreign AI tools, companies in stealth, and organizations with no visible activity in 12 months.
 
@@ -29,7 +34,7 @@ An entry goes on the landscape only when all three hold:
 
 1. **Confidence is high or medium.** Entries rated low stay in the maintainers' research tracker and are not listed until new evidence raises them.
 2. **A working website is confirmed.** A maintainer opens the homepage before merging. No website, no listing.
-3. **The organization has an AI product of its own.** Consultancies, agencies and software houses that build AI for clients without a product of their own are excluded, however strong their AI work.
+3. **AI is the product, not one feature of a product.** The organization ships its own product, and AI is what that product is and does. A product that adds an AI feature to something else (a platform, an app, a device) does not qualify, however good the feature. Consultancies, agencies and software houses that build AI for clients without a product of their own are also excluded. (Rule set 2026-10-30.)
 
 ## Entry format
 
