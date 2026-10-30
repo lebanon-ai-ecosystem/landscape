@@ -26,6 +26,7 @@ import yaml
 PRESENCE = {
     "Company in Lebanon": "hq",
     "Lebanese-founded company abroad": "diaspora",
+    "Open-source project": "unconfirmed",
 }
 MAX_DESC = 200
 

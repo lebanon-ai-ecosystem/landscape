@@ -36,10 +36,13 @@ categories:
 
       - subcategory: "Who qualifies"
         content: |
-          A company qualifies when AI is core to a live product or service
-          customers can use today, and it is headquartered in Lebanon or runs
-          a working team there. The full criteria live in CONTRIBUTING.md in
-          the project repository.
+          A company qualifies when AI is the product, not one feature of a
+          product, customers can use it today, and the company is
+          headquartered in Lebanon or runs a working team there. Acquired
+          companies qualify on the same terms. Open-source AI projects
+          created by Lebanese people qualify wherever their creators live.
+          The full criteria live in CONTRIBUTING.md in the project
+          repository.
 
       - subcategory: "How to get listed or corrected"
         content: |
