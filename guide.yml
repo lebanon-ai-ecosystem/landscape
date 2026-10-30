@@ -29,6 +29,11 @@ categories:
           every other. The map carries no logos, so no entry stands out
           because of its branding. Select a name for its details.
 
+          For presentations, the whole map is available as one 16:9 slide,
+          updated with every change:
+          [PNG](https://lebanon-ai-ecosystem.github.io/landscape/downloads/lebanon-ai-ecosystem-slide.png) or
+          [PDF](https://lebanon-ai-ecosystem.github.io/landscape/downloads/lebanon-ai-ecosystem-slide.pdf).
+
       - subcategory: "Who qualifies"
         content: |
           A company qualifies when AI is core to a live product or service
