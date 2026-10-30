@@ -12,8 +12,8 @@
 #   verified_by:  entity | public-sources | pending
 #   verified_on:  YYYY-MM-DD
 #
-# Entries named "Placeholder" are scaffolding. Remove each one once its
-# subcategory has a real entry, or merge the subcategory at data freeze.
+# Logos named *.svg with a dashed "logo pending" tile are stand-ins until the
+# organization supplies or approves its own SVG.
 #
 # Reference: https://github.com/cncf/landscape2/blob/main/docs/config/data.yml
 
@@ -21,393 +21,279 @@ categories:
   - name: "Infrastructure and compute"
     subcategories:
       - name: "Cloud, hosting and compute"
-        items:
-          - name: "Placeholder: Cloud, hosting and compute"
-            description: "Sample entry. Replace during seed research."
-            homepage_url: https://example.com
-            logo: placeholder.svg
-            extra:
-              annotations:
-                presence: hq
-                city: ""
-                founded: ""
-                verified_by: pending
-                verified_on: ""
+        items: []
       - name: "MLOps and model deployment"
-        items:
-          - name: "Placeholder: MLOps and model deployment"
-            description: "Sample entry. Replace during seed research."
-            homepage_url: https://example.com
-            logo: placeholder.svg
-            extra:
-              annotations:
-                presence: hq
-                city: ""
-                founded: ""
-                verified_by: pending
-                verified_on: ""
+        items: []
   - name: "Data"
     subcategories:
       - name: "Data platforms and engineering"
-        items:
-          - name: "Placeholder: Data platforms and engineering"
-            description: "Sample entry. Replace during seed research."
-            homepage_url: https://example.com
-            logo: placeholder.svg
-            extra:
-              annotations:
-                presence: hq
-                city: ""
-                founded: ""
-                verified_by: pending
-                verified_on: ""
+        items: []
       - name: "Data labeling and annotation"
-        items:
-          - name: "Placeholder: Data labeling and annotation"
-            description: "Sample entry. Replace during seed research."
-            homepage_url: https://example.com
-            logo: placeholder.svg
-            extra:
-              annotations:
-                presence: hq
-                city: ""
-                founded: ""
-                verified_by: pending
-                verified_on: ""
+        items: []
       - name: "Analytics and BI"
-        items:
-          - name: "Placeholder: Analytics and BI"
-            description: "Sample entry. Replace during seed research."
-            homepage_url: https://example.com
-            logo: placeholder.svg
-            extra:
-              annotations:
-                presence: hq
-                city: ""
-                founded: ""
-                verified_by: pending
-                verified_on: ""
+        items: []
   - name: "Models and core AI"
     subcategories:
       - name: "Foundation and language models"
-        items:
-          - name: "Placeholder: Foundation and language models"
-            description: "Sample entry. Replace during seed research."
-            homepage_url: https://example.com
-            logo: placeholder.svg
-            extra:
-              annotations:
-                presence: hq
-                city: ""
-                founded: ""
-                verified_by: pending
-                verified_on: ""
+        items: []
       - name: "Arabic NLP and speech"
-        items:
-          - name: "Placeholder: Arabic NLP and speech"
-            description: "Sample entry. Replace during seed research."
-            homepage_url: https://example.com
-            logo: placeholder.svg
-            extra:
-              annotations:
-                presence: hq
-                city: ""
-                founded: ""
-                verified_by: pending
-                verified_on: ""
+        items: []
       - name: "Computer vision"
-        items:
-          - name: "Placeholder: Computer vision"
-            description: "Sample entry. Replace during seed research."
-            homepage_url: https://example.com
-            logo: placeholder.svg
-            extra:
-              annotations:
-                presence: hq
-                city: ""
-                founded: ""
-                verified_by: pending
-                verified_on: ""
+        items: []
   - name: "Tools and platforms"
     subcategories:
       - name: "Agents and automation"
-        items:
-          - name: "Placeholder: Agents and automation"
-            description: "Sample entry. Replace during seed research."
-            homepage_url: https://example.com
-            logo: placeholder.svg
-            extra:
-              annotations:
-                presence: hq
-                city: ""
-                founded: ""
-                verified_by: pending
-                verified_on: ""
+        items: []
       - name: "Conversational AI"
-        items:
-          - name: "Placeholder: Conversational AI"
-            description: "Sample entry. Replace during seed research."
-            homepage_url: https://example.com
-            logo: placeholder.svg
-            extra:
-              annotations:
-                presence: hq
-                city: ""
-                founded: ""
-                verified_by: pending
-                verified_on: ""
+        items: []
       - name: "Developer tools"
-        items:
-          - name: "Placeholder: Developer tools"
-            description: "Sample entry. Replace during seed research."
-            homepage_url: https://example.com
-            logo: placeholder.svg
-            extra:
-              annotations:
-                presence: hq
-                city: ""
-                founded: ""
-                verified_by: pending
-                verified_on: ""
+        items: []
   - name: "Applied AI"
     subcategories:
       - name: "Fintech and banking"
-        items:
-          - name: "Placeholder: Fintech and banking"
-            description: "Sample entry. Replace during seed research."
-            homepage_url: https://example.com
-            logo: placeholder.svg
-            extra:
-              annotations:
-                presence: hq
-                city: ""
-                founded: ""
-                verified_by: pending
-                verified_on: ""
+        items: []
       - name: "Health and life sciences"
-        items:
-          - name: "Placeholder: Health and life sciences"
-            description: "Sample entry. Replace during seed research."
-            homepage_url: https://example.com
-            logo: placeholder.svg
-            extra:
-              annotations:
-                presence: hq
-                city: ""
-                founded: ""
-                verified_by: pending
-                verified_on: ""
+        items: []
       - name: "Education"
         items:
-          - name: "Placeholder: Education"
-            description: "Sample entry. Replace during seed research."
-            homepage_url: https://example.com
-            logo: placeholder.svg
+          - name: "Kamkalima"
+            description: "Arabic reading and writing platform for schools, with an AI writing assistant and AI-assisted correction."
+            homepage_url: https://kamkalima.com
+            logo: kamkalima.svg
             extra:
               annotations:
                 presence: hq
-                city: ""
-                founded: ""
-                verified_by: pending
-                verified_on: ""
+                city: "Beirut"
+                founded: "2015"
+                verified_by: public-sources
+                verified_on: "2026-10-30"
+                consent: pending
       - name: "Retail and e-commerce"
-        items:
-          - name: "Placeholder: Retail and e-commerce"
-            description: "Sample entry. Replace during seed research."
-            homepage_url: https://example.com
-            logo: placeholder.svg
-            extra:
-              annotations:
-                presence: hq
-                city: ""
-                founded: ""
-                verified_by: pending
-                verified_on: ""
+        items: []
       - name: "Media, marketing and adtech"
-        items:
-          - name: "Placeholder: Media, marketing and adtech"
-            description: "Sample entry. Replace during seed research."
-            homepage_url: https://example.com
-            logo: placeholder.svg
-            extra:
-              annotations:
-                presence: hq
-                city: ""
-                founded: ""
-                verified_by: pending
-                verified_on: ""
+        items: []
       - name: "Energy, climate and agriculture"
         items:
-          - name: "Placeholder: Energy, climate and agriculture"
-            description: "Sample entry. Replace during seed research."
-            homepage_url: https://example.com
-            logo: placeholder.svg
+          - name: "NuWatt"
+            description: "Hardware-free AI solar monitoring and energy management for homeowners and installers."
+            homepage_url: https://nuwatt.co
+            logo: nuwatt.svg
             extra:
               annotations:
                 presence: hq
-                city: ""
-                founded: ""
-                verified_by: pending
-                verified_on: ""
+                city: "Zahle"
+                founded: "2025"
+                verified_by: public-sources
+                verified_on: "2026-10-30"
+                consent: pending
       - name: "Legal, government and public sector"
         items:
-          - name: "Placeholder: Legal, government and public sector"
-            description: "Sample entry. Replace during seed research."
-            homepage_url: https://example.com
-            logo: placeholder.svg
+          - name: "HAQQ Legal AI"
+            description: "AI operating system for legal work, combining drafting, review and legal reasoning with practice management."
+            homepage_url: https://haqq.ai
+            logo: haqq-legal-ai.svg
             extra:
               annotations:
                 presence: hq
                 city: ""
-                founded: ""
-                verified_by: pending
-                verified_on: ""
+                founded: "2023"
+                verified_by: public-sources
+                verified_on: "2026-10-30"
+                consent: pending
       - name: "Logistics and mobility"
-        items:
-          - name: "Placeholder: Logistics and mobility"
-            description: "Sample entry. Replace during seed research."
-            homepage_url: https://example.com
-            logo: placeholder.svg
-            extra:
-              annotations:
-                presence: hq
-                city: ""
-                founded: ""
-                verified_by: pending
-                verified_on: ""
+        items: []
       - name: "HR and future of work"
-        items:
-          - name: "Placeholder: HR and future of work"
-            description: "Sample entry. Replace during seed research."
-            homepage_url: https://example.com
-            logo: placeholder.svg
-            extra:
-              annotations:
-                presence: hq
-                city: ""
-                founded: ""
-                verified_by: pending
-                verified_on: ""
+        items: []
       - name: "Cybersecurity"
-        items:
-          - name: "Placeholder: Cybersecurity"
-            description: "Sample entry. Replace during seed research."
-            homepage_url: https://example.com
-            logo: placeholder.svg
-            extra:
-              annotations:
-                presence: hq
-                city: ""
-                founded: ""
-                verified_by: pending
-                verified_on: ""
+        items: []
   - name: "Research and academia"
     subcategories:
       - name: "Universities"
         items:
-          - name: "Placeholder: Universities"
-            description: "Sample entry. Replace during seed research."
-            homepage_url: https://example.com
-            logo: placeholder.svg
+          - name: "American University of Beirut"
+            description: "University with a School of Computing and Data Sciences and several AI research groups."
+            homepage_url: https://www.aub.edu.lb
+            logo: american-university-of-beirut.svg
             extra:
               annotations:
                 presence: hq
-                city: ""
-                founded: ""
-                verified_by: pending
-                verified_on: ""
+                city: "Beirut"
+                founded: "1866"
+                verified_by: public-sources
+                verified_on: "2026-10-30"
+                consent: pending
+          - name: "Lebanese American University"
+            description: "University with an Artificial Intelligence and Cyber Systems research center and an MS in Applied AI."
+            homepage_url: https://www.lau.edu.lb
+            logo: lebanese-american-university.svg
+            extra:
+              annotations:
+                presence: hq
+                city: "Beirut"
+                founded: "1924"
+                verified_by: public-sources
+                verified_on: "2026-10-30"
+                consent: pending
+          - name: "Universite Saint-Joseph"
+            description: "University running the Center for Digital Innovation and Artificial Intelligence (CINIA)."
+            homepage_url: https://www.usj.edu.lb
+            logo: universite-saint-joseph.svg
+            extra:
+              annotations:
+                presence: hq
+                city: "Beirut"
+                founded: "1875"
+                verified_by: public-sources
+                verified_on: "2026-10-30"
+                consent: pending
       - name: "Research centers and labs"
         items:
-          - name: "Placeholder: Research centers and labs"
-            description: "Sample entry. Replace during seed research."
-            homepage_url: https://example.com
-            logo: placeholder.svg
+          - name: "AUB MIND Lab"
+            description: "Machine learning lab at AUB that released the AraBERT, AraGPT2 and AraELECTRA Arabic language models."
+            homepage_url: https://sites.aub.edu.lb/mindlab/
+            logo: aub-mind-lab.svg
+            repo_url: https://github.com/aub-mind/arabert
             extra:
               annotations:
                 presence: hq
-                city: ""
+                city: "Beirut"
                 founded: ""
-                verified_by: pending
-                verified_on: ""
+                verified_by: public-sources
+                verified_on: "2026-10-30"
+                consent: pending
+          - name: "LAU AICS Research Center"
+            description: "Artificial Intelligence and Cyber Systems research center at the Lebanese American University."
+            homepage_url: https://www.lau.edu.lb/about/centers-institutes/
+            logo: lau-aics-research-center.svg
+            extra:
+              annotations:
+                presence: hq
+                city: "Beirut"
+                founded: ""
+                verified_by: public-sources
+                verified_on: "2026-10-30"
+                consent: pending
+          - name: "USJ CINIA"
+            description: "Center for Digital Innovation and Artificial Intelligence at Universite Saint-Joseph."
+            homepage_url: https://cinia.blogs.usj.edu.lb/
+            logo: usj-cinia.svg
+            extra:
+              annotations:
+                presence: hq
+                city: "Beirut"
+                founded: ""
+                verified_by: public-sources
+                verified_on: "2026-10-30"
+                consent: pending
   - name: "Ecosystem enablers"
     subcategories:
       - name: "Investors"
         items:
-          - name: "Placeholder: Investors"
-            description: "Sample entry. Replace during seed research."
-            homepage_url: https://example.com
-            logo: placeholder.svg
+          - name: "Razor Capital"
+            description: "London-based venture firm focused on emerging markets; invested in HAQQ Legal AI."
+            homepage_url: https://www.razorcap.co
+            logo: razor-capital.svg
+            extra:
+              annotations:
+                presence: abroad
+                city: "London"
+                founded: "2016"
+                verified_by: public-sources
+                verified_on: "2026-10-30"
+                consent: pending
+          - name: "Sowlutions Ventures"
+            description: "Tech-for-equity investor and accelerator for early-stage startups; led HAQQ Legal AI's seed round."
+            homepage_url: https://sowlutions.com
+            logo: sowlutions-ventures.svg
             extra:
               annotations:
                 presence: hq
-                city: ""
-                founded: ""
-                verified_by: pending
-                verified_on: ""
+                city: "Naher El Kalb"
+                founded: "2016"
+                verified_by: public-sources
+                verified_on: "2026-10-30"
+                consent: pending
       - name: "Accelerators and incubators"
         items:
-          - name: "Placeholder: Accelerators and incubators"
-            description: "Sample entry. Replace during seed research."
-            homepage_url: https://example.com
-            logo: placeholder.svg
+          - name: "Beirut Digital District"
+            description: "Technology district hosting startups and community events, including the Lebanon AI Festival."
+            homepage_url: https://beirutdigitaldistrict.com
+            logo: beirut-digital-district.svg
             extra:
               annotations:
                 presence: hq
-                city: ""
+                city: "Beirut"
                 founded: ""
-                verified_by: pending
-                verified_on: ""
+                verified_by: public-sources
+                verified_on: "2026-10-30"
+                consent: pending
+          - name: "Berytech"
+            description: "Innovation parks, accelerators and funds supporting Lebanese startups, including AI ventures."
+            homepage_url: https://berytech.org
+            logo: berytech.svg
+            extra:
+              annotations:
+                presence: hq
+                city: "Beirut"
+                founded: "2001"
+                verified_by: public-sources
+                verified_on: "2026-10-30"
+                consent: pending
+          - name: "Zein AUB iPark"
+            description: "AUB's startup incubator and accelerator, based at Beirut Digital District."
+            homepage_url: https://sites.aub.edu.lb/ipark/
+            logo: zein-aub-ipark.svg
+            extra:
+              annotations:
+                presence: hq
+                city: "Beirut"
+                founded: "2019"
+                verified_by: public-sources
+                verified_on: "2026-10-30"
+                consent: pending
       - name: "Communities and nonprofits"
         items:
-          - name: "Placeholder: Communities and nonprofits"
-            description: "Sample entry. Replace during seed research."
-            homepage_url: https://example.com
-            logo: placeholder.svg
+          - name: "Lebanese in AI"
+            description: "Global community of Lebanese AI practitioners with monthly meetups and an online workspace."
+            homepage_url: https://buttondown.com/lebaneseinai
+            logo: lebanese-in-ai.svg
+            extra:
+              annotations:
+                presence: abroad
+                city: ""
+                founded: ""
+                verified_by: public-sources
+                verified_on: "2026-10-30"
+                consent: pending
+          - name: "ZAKA"
+            description: "AI education platform and community builder; started the Beirut AI community and co-organized the Lebanon AI Festival."
+            homepage_url: https://zaka.ai
+            logo: zaka.svg
             extra:
               annotations:
                 presence: hq
-                city: ""
+                city: "Beirut"
                 founded: ""
-                verified_by: pending
-                verified_on: ""
+                verified_by: public-sources
+                verified_on: "2026-10-30"
+                consent: pending
       - name: "Government and public bodies"
         items:
-          - name: "Placeholder: Government and public bodies"
-            description: "Sample entry. Replace during seed research."
-            homepage_url: https://example.com
-            logo: placeholder.svg
+          - name: "Ministry of State for Technology and AI"
+            description: "Lebanon's ministry for technology and artificial intelligence, leading the national AI strategy."
+            homepage_url: https://mitai.gov.lb
+            logo: ministry-of-state-for-technology-and-ai.svg
             extra:
               annotations:
                 presence: hq
-                city: ""
-                founded: ""
-                verified_by: pending
-                verified_on: ""
+                city: "Beirut"
+                founded: "2025"
+                verified_by: public-sources
+                verified_on: "2026-10-30"
+                consent: pending
   - name: "Lebanese-founded abroad"
     subcategories:
       - name: "Diaspora: AI stack"
-        items:
-          - name: "Placeholder: Diaspora: AI stack"
-            description: "Sample entry. Replace during seed research."
-            homepage_url: https://example.com
-            logo: placeholder.svg
-            extra:
-              annotations:
-                presence: diaspora
-                city: ""
-                founded: ""
-                verified_by: pending
-                verified_on: ""
+        items: []
       - name: "Diaspora: applied AI"
-        items:
-          - name: "Placeholder: Diaspora: applied AI"
-            description: "Sample entry. Replace during seed research."
-            homepage_url: https://example.com
-            logo: placeholder.svg
-            extra:
-              annotations:
-                presence: diaspora
-                city: ""
-                founded: ""
-                verified_by: pending
-                verified_on: ""
+        items: []
