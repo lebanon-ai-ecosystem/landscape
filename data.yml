@@ -35,19 +35,7 @@ categories:
       - name: "Data labeling and annotation"
         items: []
       - name: "Analytics and BI"
-        items:
-          - name: "World Monitor"
-            description: "Free, open-source real-time global intelligence dashboard with AI-generated briefs, built by Elie Habib."
-            homepage_url: https://www.worldmonitor.app
-            logo: world-monitor.svg
-            extra:
-              annotations:
-                presence: unconfirmed
-                city: ""
-                founded: "2026"
-                verified_by: public-sources
-                verified_on: "2026-10-30"
-                confidence: medium
+        items: []
   - name: "Models and core AI"
     subcategories:
       - name: "Foundation and language models"
@@ -79,19 +67,7 @@ categories:
   - name: "Applied AI"
     subcategories:
       - name: "Fintech and banking"
-        items:
-          - name: "Slideit"
-            description: "Buy now, pay later app for Lebanese shoppers and merchants, approving customers with Credit Brain, its AI underwriting system built on local data."
-            homepage_url: https://slideitapp.com
-            logo: slideit.svg
-            extra:
-              annotations:
-                presence: hq
-                city: "Beirut"
-                founded: "2025"
-                verified_by: public-sources
-                verified_on: "2026-10-30"
-                confidence: medium
+        items: []
       - name: "Health and life sciences"
         items: []
       - name: "Education"
@@ -108,18 +84,6 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: medium
-          - name: "Kamkalima"
-            description: "Arabic reading and writing platform for schools, with an AI writing assistant and AI-assisted correction."
-            homepage_url: https://kamkalima.com
-            logo: kamkalima.svg
-            extra:
-              annotations:
-                presence: hq
-                city: "Beirut"
-                founded: "2015"
-                verified_by: public-sources
-                verified_on: "2026-10-30"
-                confidence: high
           - name: "Zaker"
             description: "AI study and teaching tools for universities: adaptive quizzes from course materials, early alerts on struggling students, and a syllabus-grounded AI tutor."
             homepage_url: https://zaker.io
@@ -177,19 +141,7 @@ categories:
                 verified_on: "2026-10-30"
                 confidence: high
       - name: "Logistics and mobility"
-        items:
-          - name: "FleetRunnr"
-            description: "First-to-last-mile delivery management software with AI-powered dispatch and route allocation. Dubai-based; Lebanon presence to confirm."
-            homepage_url: https://www.fleetrunnr.com
-            logo: fleetrunnr.svg
-            extra:
-              annotations:
-                presence: unconfirmed
-                city: ""
-                founded: ""
-                verified_by: public-sources
-                verified_on: "2026-10-30"
-                confidence: medium
+        items: []
       - name: "HR and future of work"
         items:
           - name: "JOBSEEQR"
@@ -205,19 +157,7 @@ categories:
                 verified_on: "2026-10-30"
                 confidence: medium
       - name: "Cybersecurity"
-        items:
-          - name: "Chimera Security"
-            description: "Plug-and-play network security appliance for SMBs combining detection and response, firewall and vulnerability scanning with edge AI."
-            homepage_url: https://www.chimerasec.com
-            logo: chimera-security.svg
-            extra:
-              annotations:
-                presence: team
-                city: "Beirut"
-                founded: "2024"
-                verified_by: public-sources
-                verified_on: "2026-10-30"
-                confidence: medium
+        items: []
   - name: "Research and academia"
     subcategories:
       - name: "Universities"
@@ -610,18 +550,6 @@ categories:
                 presence: diaspora
                 city: "Sunnyvale"
                 founded: "2016"
-                verified_by: public-sources
-                verified_on: "2026-10-30"
-                confidence: medium
-          - name: "Torg"
-            description: "AI-powered sourcing platform that matches food and beverage buyers with verified suppliers in Europe. Berlin-based; co-founded by Rita Kerbaj."
-            homepage_url: https://usetorg.com
-            logo: torg.svg
-            extra:
-              annotations:
-                presence: diaspora
-                city: "Berlin"
-                founded: "2022"
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: medium
