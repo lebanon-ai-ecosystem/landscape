@@ -72,18 +72,6 @@ categories:
         items: []
       - name: "Education"
         items:
-          - name: "eFlow"
-            description: "AI conversational learning delivered through WhatsApp, Microsoft Teams and other messaging apps. Started at Beirut Digital District; acquired by EDT&Partners in 2025."
-            homepage_url: https://www.eflow.ai
-            logo: eflow.svg
-            extra:
-              annotations:
-                presence: unconfirmed
-                city: ""
-                founded: "2020"
-                verified_by: public-sources
-                verified_on: "2026-10-30"
-                confidence: medium
           - name: "Zaker"
             description: "AI study and teaching tools for universities: adaptive quizzes from course materials, early alerts on struggling students, and a syllabus-grounded AI tutor."
             homepage_url: https://zaker.io
@@ -102,18 +90,6 @@ categories:
         items: []
       - name: "Energy, climate and agriculture"
         items:
-          - name: "LUXEED Robotics"
-            description: "AI-guided laser weeding robot that removes weeds without herbicides. Berytech alumnus, now operating as Luxeed Robotics B.V. in the Netherlands."
-            homepage_url: https://luxeedrobotics.com
-            logo: luxeed-robotics.svg
-            extra:
-              annotations:
-                presence: unconfirmed
-                city: ""
-                founded: ""
-                verified_by: public-sources
-                verified_on: "2026-10-30"
-                confidence: medium
           - name: "NuWatt"
             description: "Hardware-free AI solar monitoring and energy management for homeowners and installers."
             homepage_url: https://nuwatt.co
@@ -265,30 +241,6 @@ categories:
     subcategories:
       - name: "Investors"
         items:
-          - name: "B&Y Venture Partners"
-            description: "Early-stage venture capital firm with offices in Beirut and Abu Dhabi; backs AI-native startups through its third fund."
-            homepage_url: https://byvp.com
-            logo: b-y-venture-partners.svg
-            extra:
-              annotations:
-                presence: team
-                city: "Beirut"
-                founded: "2015"
-                verified_by: public-sources
-                verified_on: "2026-10-30"
-                confidence: medium
-          - name: "IM Capital"
-            description: "Early-stage investment program under IM Fndng providing matching capital, equity guarantees and technical assistance; an early investor in Kamkalima."
-            homepage_url: https://im-fndng.com
-            logo: im-capital.svg
-            extra:
-              annotations:
-                presence: hq
-                city: "Beirut"
-                founded: "2015"
-                verified_by: public-sources
-                verified_on: "2026-10-30"
-                confidence: medium
           - name: "Razor Capital"
             description: "London-based venture firm focused on emerging markets; invested in HAQQ Legal AI."
             homepage_url: https://www.razorcap.co
@@ -365,18 +317,6 @@ categories:
                 confidence: high
       - name: "Communities and nonprofits"
         items:
-          - name: "Beirut AI"
-            description: "AI community started in 2017 by ZAKA's founder; runs bootcamps, meetups and AI Weekend."
-            homepage_url: https://medium.com/beirut-ai
-            logo: beirut-ai.svg
-            extra:
-              annotations:
-                presence: hq
-                city: "Beirut"
-                founded: "2017"
-                verified_by: public-sources
-                verified_on: "2026-10-30"
-                confidence: medium
           - name: "GDG Coast Lebanon"
             description: "Google Developer Group chapter in Lebanon; runs Build with AI events, DevFest Beirut and community meetups."
             homepage_url: https://gdg.community.dev/gdg-coast-lebanon/
@@ -476,18 +416,6 @@ categories:
                 presence: diaspora
                 city: "New York"
                 founded: ""
-                verified_by: public-sources
-                verified_on: "2026-10-30"
-                confidence: medium
-          - name: "Integral AI"
-            description: "Foundation world models for embodied AI and robotics, based in Tokyo. Co-founder and CEO Jad Tarifi was born in Lebanon."
-            homepage_url: https://integral.ai
-            logo: integral-ai.svg
-            extra:
-              annotations:
-                presence: diaspora
-                city: "Tokyo"
-                founded: "2021"
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: medium
