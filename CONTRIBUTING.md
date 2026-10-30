@@ -2,13 +2,12 @@
 
 Listing is free and follows the criteria below. Nobody pays for placement, and the same rules apply to every organization, including those the maintainers work for.
 
-## Three ways to submit
+## Two ways to submit
 
 1. **Pull request.** Add your entry to `data.yml`. No logo file is needed.
-2. **Issue form.** Open a new issue with the "Add or update an entry" form. A maintainer turns it into a pull request.
-3. **Web form.** For contributors without a GitHub account: FORM_URL_TBD.
+2. **Issue.** Open a new issue with the ["Add or update an entry" form](https://github.com/lebanon-ai-ecosystem/landscape/issues/new/choose). A maintainer turns it into a pull request.
 
-Every change, from any route, lands as a reviewed commit.
+Both need a free GitHub account. Every change lands as a reviewed commit.
 
 ## Who qualifies
 
@@ -71,4 +70,4 @@ The landscape shows no organization logos. Every entry appears as its name, in b
 
 ## Corrections and removals
 
-Use the issue form or email CONTACT_EMAIL_TBD. Maintainers answer within 7 days and record the decision in the issue.
+Open an issue with the same form, or a pull request. Maintainers answer within 7 days and record the decision in the issue.
