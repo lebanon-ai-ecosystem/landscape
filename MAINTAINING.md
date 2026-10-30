@@ -44,7 +44,7 @@ Names must match exactly across files, including capitalization and punctuation.
 
 ## Rules worth knowing
 
-**The 16:9 slide is rebuilt on every deploy.** The build lays the whole map out on one 1920x1080 slide in three columns and publishes it as `downloads/lebanon-ai-ecosystem-slide.png` and `.pdf`. It picks the largest name tile that fits (112px today). If entries no longer fit at 60px, the build fails and asks for a change to `COLUMNS` in `scripts/make-slide.py`. A category missing from `COLUMNS` also fails the build.
+**The 16:9 slide is rebuilt on every deploy.** The build lays the whole map out on one 1920x1080 slide in three columns and publishes it as `downloads/lebanon-ai-ecosystem-slide.png` and `.pdf`, and as `docs/landscape.png` and `.pdf`, which the download menu in the site header serves. Without those two files the menu spins forever. It picks the largest name tile that fits (112px today). If entries no longer fit at 60px, the build fails and asks for a change to `COLUMNS` in `scripts/make-slide.py`. A category missing from `COLUMNS` also fails the build.
 
 **A category must belong to at least one view.** A category in `data.yml` that is not listed under any group in `settings.yml` builds without error but never appears on the map. Add new categories to "Full landscape" and to the view they belong to.
 
