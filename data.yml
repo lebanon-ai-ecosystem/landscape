@@ -79,7 +79,19 @@ categories:
   - name: "Applied AI"
     subcategories:
       - name: "Fintech and banking"
-        items: []
+        items:
+          - name: "Slideit"
+            description: "Buy now, pay later app for Lebanese shoppers and merchants, approving customers with Credit Brain, its AI underwriting system built on local data."
+            homepage_url: https://slideitapp.com
+            logo: slideit.svg
+            extra:
+              annotations:
+                presence: hq
+                city: "Beirut"
+                founded: "2025"
+                verified_by: public-sources
+                verified_on: "2026-10-30"
+                confidence: medium
       - name: "Health and life sciences"
         items: []
       - name: "Education"
@@ -194,10 +206,10 @@ categories:
                 confidence: medium
       - name: "Cybersecurity"
         items:
-          - name: "Chimera Cybersecurity"
+          - name: "Chimera Security"
             description: "Plug-and-play network security appliance for SMBs combining detection and response, firewall and vulnerability scanning with edge AI."
             homepage_url: https://www.chimerasec.com
-            logo: chimera-cybersecurity.svg
+            logo: chimera-security.svg
             extra:
               annotations:
                 presence: team
@@ -246,10 +258,10 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: medium
-          - name: "Universite Saint-Joseph"
+          - name: "Université Saint-Joseph de Beyrouth"
             description: "University running the Center for Digital Innovation and Artificial Intelligence (CINIA)."
             homepage_url: https://www.usj.edu.lb
-            logo: universite-saint-joseph.svg
+            logo: universite-saint-joseph-de-beyrouth.svg
             extra:
               annotations:
                 presence: hq
@@ -298,7 +310,7 @@ categories:
                 verified_on: "2026-10-30"
                 confidence: high
           - name: "USJ CINIA"
-            description: "Center for Digital Innovation and Artificial Intelligence at Universite Saint-Joseph."
+            description: "Center for Digital Innovation and Artificial Intelligence at Université Saint-Joseph de Beyrouth."
             homepage_url: https://cinia.blogs.usj.edu.lb/
             logo: usj-cinia.svg
             extra:

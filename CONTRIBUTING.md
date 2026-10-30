@@ -58,7 +58,7 @@ Place the entry in the one subcategory that best describes what the product does
 The landscape shows no organization logos. Every entry appears as its name, in black Inter SemiBold, so no organization stands out because of its branding and no trademark is reproduced.
 
 - Set `logo` to the organization's name in lowercase with hyphens (`example-co.svg`). The build generates that file from `name`; do not add files to `logos/`.
-- All names share one type size: the size the longest name needs to fit. A new long name can make every name a little smaller. If a name would push the size below a readable minimum, the build fails and asks for a shorter display name, such as the name the organization uses on its own site.
+- All names share one type size, 39.5 on a 240-unit tile at most: the size the hardest name needs to fit. Long single words decide it, because names wrap only between words (and after a hyphen when nothing else fits). A new long word can make every name smaller. If a name would push the size below a readable minimum, the build fails and asks for a shorter display name, such as the name the organization uses on its own site.
 - `name` is the display name. Use the organization's own spelling and capitalization.
 
 ## Verification and review
