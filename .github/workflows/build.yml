@@ -66,6 +66,10 @@ jobs:
       - name: Apply category colors
         run: python3 scripts/apply-category-colors.py build category-colors.json
 
+      - name: Cap content width
+        # See scripts/apply-layout.py; raise MAX_WIDTH as the map fills up.
+        run: python3 scripts/apply-layout.py build
+
       - name: SPA fallback
         # Single-page app: unknown paths must serve the app.
         run: cp build/index.html build/404.html

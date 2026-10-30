@@ -39,6 +39,7 @@ Names must match exactly across files, including capitalization and punctuation.
 | Change the project name or header logo | `settings.yml` (`foundation`, `description`); `assets/header-logo.svg` and `assets/footer-logo.svg`; `guide.yml` introduction; README.md |
 | Change the favicon or link-preview image | Commit the new file in `assets/` first; then point `images` in `settings.yml` at that commit (the comment there explains why) |
 | Move to a custom domain | `settings.yml` (set `url`, delete `base_path`); then Settings, Pages, Custom domain |
+| Change how wide the page content can get | `scripts/apply-layout.py` (`MAX_WIDTH`) |
 | Upgrade landscape2 | `.github/workflows/build.yml` (`LANDSCAPE2_VERSION`) |
 
 ## Rules worth knowing
