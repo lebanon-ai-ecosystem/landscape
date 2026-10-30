@@ -57,6 +57,7 @@ The landscape shows no organization logos. Every entry appears as its name, in b
 ## Verification and review
 
 - Each entry is confirmed by the organization or by two independent public sources before it goes live.
+- Entries seeded from research carry a `confidence` annotation. `high` means every criterion was confirmed from public sources; `medium` means the organization is real and active but one criterion (live product, Lebanon presence, or recent activity) still needs checking. The maintainers listed both at launch so organizations can see their entry and confirm, correct, or ask for removal. A `medium` entry that fails the check is removed.
 - Adding, moving, or removing an entry needs approval from two maintainers.
 - A maintainer never approves changes to an organization they work for, advise, or invest in.
 
