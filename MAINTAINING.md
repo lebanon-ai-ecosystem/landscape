@@ -14,7 +14,7 @@ Check progress in the repository's Actions tab.
 
 **In the browser (no setup).** Open the file on GitHub, click the pencil icon, edit, then click "Commit changes" and choose "Create a new branch for this commit and start a pull request". Good for entries, descriptions, guide text, and colors.
 
-**On your computer.** Clone the repository, create a branch, edit, preview locally (README.md, "Build locally"), push, and open a pull request. Better for structural changes and logos, because you can see the result before anyone reviews it.
+**On your computer.** Clone the repository, create a branch, edit, preview locally (README.md, "Build locally"), push, and open a pull request. Better for structural changes, because you can see the result before anyone reviews it.
 
 Either way, every change lands through a reviewed pull request.
 
@@ -24,7 +24,7 @@ Names must match exactly across files, including capitalization and punctuation.
 
 | Change | Files |
 | --- | --- |
-| Add, update, or remove an entry | `data.yml`; its SVG in `logos/` |
+| Add, update, or remove an entry | `data.yml` only; the logo is generated from the name |
 | Move an entry to another subcategory | `data.yml` (move the whole block) |
 | List an entry in a second subcategory | `data.yml` (`second_path` on the entry) |
 | Add a subcategory | `data.yml`; optionally `guide.yml` |
@@ -60,7 +60,7 @@ Names must match exactly across files, including capitalization and punctuation.
 - The "build" check is green.
 - Every new or renamed name matches across all files in the table above.
 - Each new entry meets the inclusion criteria and has its evidence in the PR or linked issue.
-- Each new entry has an SVG logo supplied or approved by the organization.
+- No files were added to `logos/` (they are generated; see CONTRIBUTING.md, "Names, not logos").
 - A second maintainer approved it, and neither approver works for, advises, or invests in the organization concerned.
 
 ## Undoing a change

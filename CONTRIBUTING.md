@@ -4,7 +4,7 @@ Listing is free and follows the criteria below. Nobody pays for placement, and t
 
 ## Three ways to submit
 
-1. **Pull request.** Add your entry to `data.yml` and your SVG logo to `logos/`.
+1. **Pull request.** Add your entry to `data.yml`. No logo file is needed.
 2. **Issue form.** Open a new issue with the "Add or update an entry" form. A maintainer turns it into a pull request.
 3. **Web form.** For contributors without a GitHub account: FORM_URL_TBD.
 
@@ -30,7 +30,7 @@ Every change, from any route, lands as a reviewed commit.
 - name: "Example Co"
   description: "One plain sentence on what the product does. 200 characters maximum."
   homepage_url: https://example.com
-  logo: example-co.svg
+  logo: example-co.svg     # file name only; the image is generated from the name
   # Optional: show the entry in a second subcategory too.
   # second_path:
   #   - "Applied AI / Health and life sciences"
@@ -46,11 +46,13 @@ Every change, from any route, lands as a reviewed commit.
 
 Place the entry in the one subcategory that best describes what the product does, not who buys it. Keep entries in alphabetical order within a subcategory.
 
-## Logos
+## Names, not logos
 
-- SVG only, named after the organization in lowercase with hyphens (`example-co.svg`).
-- Use the stacked variant if one exists; no reversed (white on dark) versions.
-- Supplied or approved by the organization. Maintainers do not redraw or vectorize logos without permission.
+The landscape shows no organization logos. Every entry appears as its name, in black Inter SemiBold, so no organization stands out because of its branding and no trademark is reproduced.
+
+- Set `logo` to the organization's name in lowercase with hyphens (`example-co.svg`). The build generates that file from `name`; do not add files to `logos/`.
+- All names share one type size: the size the longest name needs to fit. A new long name can make every name a little smaller. If a name would push the size below a readable minimum, the build fails and asks for a shorter display name, such as the name the organization uses on its own site.
+- `name` is the display name. Use the organization's own spelling and capitalization.
 
 ## Verification and review
 

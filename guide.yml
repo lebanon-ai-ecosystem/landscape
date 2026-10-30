@@ -18,11 +18,15 @@ categories:
     subcategories:
       - subcategory: "How to read the map"
         content: |
-          The map has four views. The AI stack runs from infrastructure and
-          data up through models and tools. Applied AI groups companies by the
-          sector they serve. Research and enablers covers universities, labs,
-          investors, accelerators, communities, and public bodies. Diaspora
-          lists Lebanese-founded companies headquartered abroad.
+          The full landscape shows every entry. Applied AI groups companies by
+          the sector they serve. Research and enablers covers universities,
+          labs, investors, accelerators, communities, and public bodies. Views
+          for the AI stack and for diaspora companies open once they have
+          entries.
+
+          Each organization appears as its name, in the same font and size as
+          every other. The map carries no logos, so no entry stands out
+          because of its branding. Select a name for its details.
 
       - subcategory: "Who qualifies"
         content: |
@@ -130,7 +134,7 @@ categories:
         content: |
           Draft: what belongs here, with one example once entries exist.
 
-      - subcategory: "Legal, government and public sector"
+      - subcategory: "Legal and compliance"
         content: |
           Draft: what belongs here, with one example once entries exist.
 
