@@ -30,6 +30,14 @@ grid_items_size: large
 
 view_mode: grid
 
+# Browser tab icon and link-preview image. landscape2 downloads these at build
+# time, so they must be full URLs. They are pinned to the commit that added the
+# files (stable even if main moves). To change either image, commit the new file
+# first, then point these URLs at that commit.
+images:
+  favicon: "https://raw.githubusercontent.com/lebanon-ai-ecosystem/landscape/de29c5886a4b21438867837132187a57a0beee0d/assets/favicon.png"
+  open_graph: "https://raw.githubusercontent.com/lebanon-ai-ecosystem/landscape/de29c5886a4b21438867837132187a57a0beee0d/assets/social-card.png"
+
 header:
   links:
     github: "https://github.com/lebanon-ai-ecosystem/landscape"

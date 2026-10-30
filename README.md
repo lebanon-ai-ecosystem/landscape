@@ -20,7 +20,8 @@ See [MAINTAINING.md](MAINTAINING.md) for how changes go live, which files to tou
 | `scripts/apply-category-colors.py` | Post-build step that applies `category-colors.json` |
 | `guide.yml` | Content for the Guide page |
 | `logos/` | One SVG per entry |
-| `assets/` | Header and footer logos for the site itself |
+| `assets/` | Site header and footer logos, favicon, and social preview card |
+| `brand/` | SVG sources for the cedar mark, wordmarks, and GitHub avatar |
 | `.github/workflows/build.yml` | Validate on PRs; build and deploy to GitHub Pages on merge and nightly |
 | `.github/ISSUE_TEMPLATE/add-entry.yml` | Structured form for new entries, corrections, and removals |
 
@@ -61,7 +62,6 @@ landscape2 alternates every category between two colors. `scripts/apply-category
 
 - [ ] If the org name differs from `lebanon-ai-ecosystem`, update it in `settings.yml` and this README
 - [ ] When a custom domain is ready: set it in `settings.yml` (`url`), delete `base_path`, and add it under Settings, Pages
-- [ ] Replace the placeholder header and footer logos in `assets/`
 - [ ] Enable GitHub Pages with source set to GitHub Actions
 - [ ] Add a `LANDSCAPE_GITHUB_TOKENS` secret (comma-separated tokens, `public_repo` scope) to collect GitHub stats
 - [ ] Set the contact email in `CODE_OF_CONDUCT.md` and `CONTRIBUTING.md`
