@@ -1,0 +1,55 @@
+# Code of conduct route with no email address. Someone opens an issue with
+# "CoC" in the title (the "Conduct concern" form does this) and the workflow
+# labels it, assigns the maintainers, acknowledges it and locks it so nobody
+# else can comment. A maintainer then follows up privately; see
+# CODE_OF_CONDUCT.md.
+name: Conduct concern
+
+on:
+  issues:
+    types: [opened, edited, labeled]
+
+permissions:
+  issues: write
+
+env:
+  # GitHub logins of the maintainers who receive conduct concerns, space
+  # separated. Keep in step with MAINTAINERS.md.
+  CONDUCT_MAINTAINERS: ibrahimhaddad
+
+concurrency:
+  group: conduct-${{ github.event.issue.number }}
+
+jobs:
+  # Issues from the form arrive with the `coc` label and fire "labeled".
+  # Plain issues with "CoC" in the title fire "opened" or "edited". Labels
+  # added by this workflow do not start it again.
+  acknowledge:
+    if: >-
+      (github.event.action == 'labeled' && github.event.label.name == 'coc') ||
+      (github.event.action != 'labeled' &&
+       !contains(github.event.issue.labels.*.name, 'coc') &&
+       contains(github.event.issue.title, 'CoC'))
+    runs-on: ubuntu-latest
+    steps:
+      - name: Label, assign, acknowledge and lock
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          NUMBER: ${{ github.event.issue.number }}
+          LOCKED: ${{ github.event.issue.locked }}
+        run: |
+          gh issue edit "$NUMBER" -R "$REPO" --add-label coc
+          for m in $CONDUCT_MAINTAINERS; do
+            gh issue edit "$NUMBER" -R "$REPO" --add-assignee "$m" || true
+          done
+          mentions=$(for m in $CONDUCT_MAINTAINERS; do printf '@%s ' "$m"; done)
+          cat > ack.md <<MSG
+          Thank you. A maintainer will contact you privately within 3 days. Notified: ${mentions}
+
+          This issue is public, so please do not add details here; if you already did, a maintainer will remove them. The issue is now locked so nobody else can comment, and it will be closed once the private conversation has started. Closing it says nothing about the outcome.
+          MSG
+          gh issue comment "$NUMBER" -R "$REPO" --body-file ack.md
+          if [ "$LOCKED" != "true" ]; then
+            gh api -X PUT "repos/$REPO/issues/$NUMBER/lock" >/dev/null
+          fi

@@ -64,6 +64,24 @@ Names must match exactly across files, including capitalization and punctuation.
 - No files were added to `logos/` (they are generated; see CONTRIBUTING.md, "Names, not logos").
 - A second maintainer approved it, and neither approver works for, advises, or invests in the organization concerned.
 
+## Automations
+
+Three workflows besides "Build and deploy" run on their own. Each is a file in `.github/workflows/`.
+
+**Issue to pull request** (`issue-to-pr.yml`). Add the `approved` label to an "Add or update an entry" issue for a new entry and the workflow adds the entry to `data.yml` in its subcategory, in alphabetical order, validates it, and opens a pull request that closes the issue. It sets `confidence: medium` and `verified_by: public-sources`; adjust them in the pull request if needed. If the issue cannot be converted (unknown subcategory, description over 200 characters, name already listed), the workflow explains why in the issue and removes the label; fix the issue and add the label again. Corrections and removals stay manual.
+
+Pull requests opened by a workflow do not start other workflows, so the "build" check does not run on its own. Close and reopen the pull request to start it. If the workflow pushes the branch but cannot open the pull request, turn on Settings, Actions, General, "Allow GitHub Actions to create and approve pull requests".
+
+**Website check** (`website-check.yml`). Every Monday it opens every homepage on the map and keeps one issue, labeled `website-check`, listing the ones that failed. "Broken" means the site did not load after three tries: fix the URL or remove the entry (listing rule 2). "Check by hand" means the site turned the check away, usually bot protection; open it in a browser. The issue closes itself when everything loads. Run it any time from the Actions tab.
+
+**Conduct concern** (`conduct.yml`). An issue labeled `coc`, or any issue with "CoC" in its title, is assigned to the maintainers in `CONDUCT_MAINTAINERS`, acknowledged and locked. Then:
+
+1. Within 3 days, contact the reporter the way they chose on the form. For a private repository, create one in the organization named `conduct-<issue number>`, set it to private, and invite only the reporter and the maintainers handling the report.
+2. If the reporter put details in the public issue, edit them out.
+3. Close the public issue once the private conversation has started.
+4. Do not handle a report you are involved in, or that concerns an organization you work for, advise or invest in. Hand it to another maintainer.
+5. Delete the private repository when the report is closed, unless the reporter asks to keep it.
+
 ## Undoing a change
 
 Open the merged pull request on GitHub and click "Revert". That creates a new pull request that reverses it; merge it and the site rebuilds. On the command line, `git revert <commit>` does the same.

@@ -1,0 +1,102 @@
+# When a maintainer adds the `approved` label to an "Add or update an entry"
+# issue, draft the data.yml change as a pull request. Only new entries are
+# automated. The issue text is untrusted: it reaches the script through an
+# environment variable and is never pasted into a shell command.
+name: Issue to pull request
+
+on:
+  issues:
+    types: [labeled]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: issue-to-pr-${{ github.event.issue.number }}
+
+env:
+  LANDSCAPE2_VERSION: v1.1.0
+
+jobs:
+  draft:
+    if: >-
+      github.event.label.name == 'approved' &&
+      contains(github.event.issue.labels.*.name, 'entry')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Only maintainers can approve
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ACTOR: ${{ github.actor }}
+          REPO: ${{ github.repository }}
+        run: |
+          perm=$(gh api "repos/$REPO/collaborators/$ACTOR/permission" --jq .permission)
+          case "$perm" in admin|maintain|write) ;; *) echo "::error::$ACTOR cannot approve entries"; exit 1;; esac
+
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Add the entry to data.yml
+        id: entry
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: |
+          python3 -m pip install --quiet "PyYAML==6.0.3" "fonttools==4.66.1"
+          python3 scripts/issue-to-entry.py data.yml > result.json
+          cat result.json
+          echo "ok=$(python3 -c 'import json;print(str(json.load(open("result.json"))["ok"]).lower())')" >> "$GITHUB_OUTPUT"
+
+      - name: Explain why nothing was drafted
+        if: steps.entry.outputs.ok != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NUMBER: ${{ github.event.issue.number }}
+        run: |
+          python3 -c 'import json;print("No pull request was drafted.\n\n"+json.load(open("result.json"))["reason"])' > comment.md
+          gh issue comment "$NUMBER" --body-file comment.md
+          gh issue edit "$NUMBER" --remove-label approved
+
+      - name: Validate
+        if: steps.entry.outputs.ok == 'true'
+        run: |
+          curl --proto '=https' --tlsv1.2 -LsSf \
+            "https://github.com/cncf/landscape2/releases/download/${LANDSCAPE2_VERSION}/landscape2-installer.sh" | sh
+          "$HOME/.cargo/bin/landscape2" validate data --data-file data.yml
+          python3 scripts/generate-name-logos.py data.yml logos
+
+      - name: Open the pull request
+        if: steps.entry.outputs.ok == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NUMBER: ${{ github.event.issue.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          name=$(python3 -c 'import json;print(json.load(open("result.json"))["name"])')
+          where=$(python3 -c 'import json;print(json.load(open("result.json"))["subcategory"])')
+          branch="entry/issue-$NUMBER"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git add data.yml
+          git commit -m "Add $name (from #$NUMBER)"
+          git push --force origin "$branch"
+          {
+            echo "Adds **$name** to $where, drafted from #$NUMBER."
+            echo
+            echo "Before merging:"
+            echo "- Close and reopen this pull request so the build check runs (pull requests opened by the workflow do not start other workflows)."
+            echo "- Open the homepage and confirm the three listing rules in CONTRIBUTING.md."
+            echo "- Check \`presence\` and \`confidence\` in the annotations; the workflow defaults confidence to medium."
+            echo
+            echo "Closes #$NUMBER"
+          } > pr.md
+          if gh pr create --base main --head "$branch" --title "Add $name" --body-file pr.md > pr-url.txt; then
+            gh issue comment "$NUMBER" --body "Drafted $(cat pr-url.txt)."
+          else
+            gh issue comment "$NUMBER" --body "Pushed branch \`$branch\`, but the workflow could not open the pull request (check Settings, Actions, \"Allow GitHub Actions to create and approve pull requests\"). Open it here: https://github.com/$REPO/compare/main...$branch"
+          fi

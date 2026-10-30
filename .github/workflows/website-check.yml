@@ -1,0 +1,44 @@
+# Weekly: open every homepage on the map and open or update one issue
+# listing any that fail (listing rule 2: a working website is required).
+name: Website check
+
+on:
+  schedule:
+    - cron: "23 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Check homepages
+        run: |
+          python3 -m pip install --quiet "PyYAML==6.0.3"
+          python3 scripts/check-websites.py data.yml website-check.md
+
+      - name: Open or update the issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          existing=$(gh issue list --label website-check --state open --json number --jq '.[0].number // empty')
+          if [ -f website-check.md ]; then
+            if [ -n "$existing" ]; then
+              gh issue edit "$existing" --body-file website-check.md
+              gh issue comment "$existing" --body "Re-checked $(date -u +%F). The table above is current."
+            else
+              gh issue create --title "Website check: homepages to review" \
+                --label website-check --body-file website-check.md
+            fi
+          elif [ -n "$existing" ]; then
+            gh issue close "$existing" --comment "All homepages loaded on $(date -u +%F)."
+          fi
