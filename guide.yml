@@ -38,9 +38,9 @@ categories:
 
       - subcategory: "How to get listed or corrected"
         content: |
-          Open a pull request, use the GitHub issue form, or use the web form
-          linked in the header. Maintainers answer correction and removal
-          requests within 7 days.
+          Open a pull request or an issue in the project repository on
+          GitHub: https://github.com/lebanon-ai-ecosystem/landscape.
+          Maintainers answer correction and removal requests within 7 days.
 
   - category: "Infrastructure and compute"
     content: |
