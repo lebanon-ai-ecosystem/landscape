@@ -73,6 +73,10 @@ jobs:
           python3 -m pip install --quiet "playwright==1.63.0"
           python3 -m playwright install --with-deps chromium
           python3 scripts/make-slide.py data.yml logos category-colors.json build/downloads
+          # The header download menu fetches docs/landscape.png and .pdf;
+          # landscape2 does not create them, so serve the slide there.
+          cp build/downloads/lebanon-ai-ecosystem-slide.png build/docs/landscape.png
+          cp build/downloads/lebanon-ai-ecosystem-slide.pdf build/docs/landscape.pdf
 
       - name: SPA fallback
         # Single-page app: unknown paths must serve the app.
