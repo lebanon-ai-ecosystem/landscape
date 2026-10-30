@@ -29,8 +29,8 @@ Names must match exactly across files, including capitalization and punctuation.
 | List an entry in a second subcategory | `data.yml` (`second_path` on the entry) |
 | Add a subcategory | `data.yml`; optionally `guide.yml` |
 | Rename a subcategory | `data.yml`; `guide.yml`; any `second_path` that points to it |
-| Add a category | `data.yml`; `settings.yml` (`groups`); `category-colors.json`; optionally `guide.yml` |
-| Rename a category | `data.yml`; `settings.yml` (`groups`); `category-colors.json`; `guide.yml`; any `second_path` that points to it |
+| Add a category | `data.yml`; `settings.yml` (`groups`); `category-colors.json`; `scripts/make-slide.py` (`COLUMNS`); optionally `guide.yml` |
+| Rename a category | `data.yml`; `settings.yml` (`groups`); `category-colors.json`; `scripts/make-slide.py` (`COLUMNS`); `guide.yml`; any `second_path` that points to it |
 | Remove a category or subcategory | Same files as renaming; move or remove its entries first |
 | Change a category's color | `category-colors.json` |
 | Change site colors (buttons, links, fallback category colors) | `settings.yml` (`colors`, all seven required) |
@@ -39,10 +39,12 @@ Names must match exactly across files, including capitalization and punctuation.
 | Change the project name or header logo | `settings.yml` (`foundation`, `description`); `assets/header-logo.svg` and `assets/footer-logo.svg`; `guide.yml` introduction; README.md |
 | Change the favicon or link-preview image | Commit the new file in `assets/` first; then point `images` in `settings.yml` at that commit (the comment there explains why) |
 | Move to a custom domain | `settings.yml` (set `url`, delete `base_path`); then Settings, Pages, Custom domain |
-| Change how wide the page content can get | `scripts/apply-layout.py` (`MAX_WIDTH`) |
+| Change the 16:9 slide layout (which category goes in which column) | `scripts/make-slide.py` (`COLUMNS`) |
 | Upgrade landscape2 | `.github/workflows/build.yml` (`LANDSCAPE2_VERSION`) |
 
 ## Rules worth knowing
+
+**The 16:9 slide is rebuilt on every deploy.** The build lays the whole map out on one 1920x1080 slide in three columns and publishes it as `downloads/lebanon-ai-ecosystem-slide.png` and `.pdf`. It picks the largest name tile that fits (112px today). If entries no longer fit at 60px, the build fails and asks for a change to `COLUMNS` in `scripts/make-slide.py`. A category missing from `COLUMNS` also fails the build.
 
 **A category must belong to at least one view.** A category in `data.yml` that is not listed under any group in `settings.yml` builds without error but never appears on the map. Add new categories to "Full landscape" and to the view they belong to.
 

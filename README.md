@@ -26,6 +26,10 @@ See [MAINTAINING.md](MAINTAINING.md) for how changes go live, which files to tou
 | `.github/workflows/build.yml` | Validate on PRs; build and deploy to GitHub Pages on merge and nightly |
 | `.github/ISSUE_TEMPLATE/add-entry.yml` | Structured form for new entries, corrections, and removals |
 
+## 16:9 slide
+
+Every deploy also publishes the whole map as one 1920x1080 slide for presentations: [PNG](https://lebanon-ai-ecosystem.github.io/landscape/downloads/lebanon-ai-ecosystem-slide.png), [PDF](https://lebanon-ai-ecosystem.github.io/landscape/downloads/lebanon-ai-ecosystem-slide.pdf). To make it locally after generating the name logos: `python3 -m pip install playwright && python3 -m playwright install chromium`, then `python3 scripts/make-slide.py data.yml logos category-colors.json downloads`.
+
 ## Build locally
 
 Install landscape2 (pinned in CI to v1.1.0):

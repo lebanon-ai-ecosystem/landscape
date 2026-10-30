@@ -66,9 +66,13 @@ jobs:
       - name: Apply category colors
         run: python3 scripts/apply-category-colors.py build category-colors.json
 
-      - name: Cap content width
-        # See scripts/apply-layout.py; raise MAX_WIDTH as the map fills up.
-        run: python3 scripts/apply-layout.py build
+      - name: Make the 16:9 slide
+        # PNG and PDF of the whole map on one slide, published under
+        # downloads/. See scripts/make-slide.py.
+        run: |
+          python3 -m pip install --quiet "playwright==1.63.0"
+          python3 -m playwright install --with-deps chromium
+          python3 scripts/make-slide.py data.yml logos category-colors.json build/downloads
 
       - name: SPA fallback
         # Single-page app: unknown paths must serve the app.
