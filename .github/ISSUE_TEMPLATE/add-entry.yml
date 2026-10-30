@@ -1,0 +1,86 @@
+name: Add or update an entry
+description: Propose an organization for the Lebanon AI landscape, or correct an existing entry.
+title: "[Entry] "
+labels: ["entry"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Read the inclusion criteria in CONTRIBUTING.md first. Listing is free; nobody pays for placement.
+  - type: dropdown
+    id: request
+    attributes:
+      label: Request type
+      options:
+        - New entry
+        - Correction to an existing entry
+        - Removal
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Organization name
+    validations:
+      required: true
+  - type: input
+    id: homepage
+    attributes:
+      label: Website
+      description: For companies, the page that describes the live AI product.
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Entity type
+      options:
+        - Company in Lebanon
+        - Lebanese-founded company abroad
+        - University or research lab
+        - Investor
+        - Accelerator or incubator
+        - Community or nonprofit
+        - Government body
+    validations:
+      required: true
+  - type: input
+    id: subcategory
+    attributes:
+      label: Proposed subcategory
+      description: See the map for the current list. Maintainers make the final call.
+  - type: textarea
+    id: description
+    attributes:
+      label: One-sentence description
+      description: What the product or organization does, in plain words. 200 characters maximum.
+    validations:
+      required: true
+  - type: input
+    id: city
+    attributes:
+      label: City
+      description: City of the Lebanon office, or the headquarters city for diaspora companies.
+  - type: input
+    id: founded
+    attributes:
+      label: Year founded
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Links that show the criteria are met (product page, team in Lebanon, Lebanese founder, publications, portfolio).
+    validations:
+      required: true
+  - type: input
+    id: logo
+    attributes:
+      label: SVG logo
+      description: Link to an SVG logo, stacked variant if one exists. Entries go live only with an SVG supplied or approved by the organization.
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: I represent this organization, or I have linked public sources for every claim above.
+          required: true

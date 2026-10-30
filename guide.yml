@@ -1,0 +1,195 @@
+# Lebanon AI landscape guide
+#
+# Category and subcategory names below match data.yml so the guide links to
+# the live boxes. Use heading levels 4 to 6 inside content blocks.
+#
+# Reference: https://github.com/cncf/landscape2/blob/main/docs/config/guide.yml
+
+categories:
+  - category: "Introduction"
+    content: |
+      The Lebanon AI landscape maps the companies, research groups, and
+      enablers building artificial intelligence in Lebanon, plus
+      Lebanese-founded AI companies operating abroad.
+
+      It is a neutral, open source community project. Inclusion follows
+      published criteria and is free. Nobody pays for placement.
+
+    subcategories:
+      - subcategory: "How to read the map"
+        content: |
+          The map has four views. The AI stack runs from infrastructure and
+          data up through models and tools. Applied AI groups companies by the
+          sector they serve. Research and enablers covers universities, labs,
+          investors, accelerators, communities, and public bodies. Diaspora
+          lists Lebanese-founded companies headquartered abroad.
+
+      - subcategory: "Who qualifies"
+        content: |
+          A company qualifies when AI is core to a live product or service
+          customers can use today, and it is headquartered in Lebanon or runs
+          a working team there. The full criteria live in CONTRIBUTING.md in
+          the project repository.
+
+      - subcategory: "How to get listed or corrected"
+        content: |
+          Open a pull request, use the GitHub issue form, or use the web form
+          linked in the header. Maintainers answer correction and removal
+          requests within 7 days.
+
+  - category: "Infrastructure and compute"
+    content: |
+      Draft: one paragraph on what this category covers and where Lebanon stands.
+
+    subcategories:
+      - subcategory: "Cloud, hosting and compute"
+        content: |
+          Draft: what belongs here, with one example once entries exist.
+
+      - subcategory: "MLOps and model deployment"
+        content: |
+          Draft: what belongs here, with one example once entries exist.
+
+  - category: "Data"
+    content: |
+      Draft: one paragraph on what this category covers and where Lebanon stands.
+
+    subcategories:
+      - subcategory: "Data platforms and engineering"
+        content: |
+          Draft: what belongs here, with one example once entries exist.
+
+      - subcategory: "Data labeling and annotation"
+        content: |
+          Draft: what belongs here, with one example once entries exist.
+
+      - subcategory: "Analytics and BI"
+        content: |
+          Draft: what belongs here, with one example once entries exist.
+
+  - category: "Models and core AI"
+    content: |
+      Draft: one paragraph on what this category covers and where Lebanon stands.
+
+    subcategories:
+      - subcategory: "Foundation and language models"
+        content: |
+          Draft: what belongs here, with one example once entries exist.
+
+      - subcategory: "Arabic NLP and speech"
+        content: |
+          Draft: what belongs here, with one example once entries exist.
+
+      - subcategory: "Computer vision"
+        content: |
+          Draft: what belongs here, with one example once entries exist.
+
+  - category: "Tools and platforms"
+    content: |
+      Draft: one paragraph on what this category covers and where Lebanon stands.
+
+    subcategories:
+      - subcategory: "Agents and automation"
+        content: |
+          Draft: what belongs here, with one example once entries exist.
+
+      - subcategory: "Conversational AI"
+        content: |
+          Draft: what belongs here, with one example once entries exist.
+
+      - subcategory: "Developer tools"
+        content: |
+          Draft: what belongs here, with one example once entries exist.
+
+  - category: "Applied AI"
+    content: |
+      Draft: one paragraph on what this category covers and where Lebanon stands.
+
+    subcategories:
+      - subcategory: "Fintech and banking"
+        content: |
+          Draft: what belongs here, with one example once entries exist.
+
+      - subcategory: "Health and life sciences"
+        content: |
+          Draft: what belongs here, with one example once entries exist.
+
+      - subcategory: "Education"
+        content: |
+          Draft: what belongs here, with one example once entries exist.
+
+      - subcategory: "Retail and e-commerce"
+        content: |
+          Draft: what belongs here, with one example once entries exist.
+
+      - subcategory: "Media, marketing and adtech"
+        content: |
+          Draft: what belongs here, with one example once entries exist.
+
+      - subcategory: "Energy, climate and agriculture"
+        content: |
+          Draft: what belongs here, with one example once entries exist.
+
+      - subcategory: "Legal, government and public sector"
+        content: |
+          Draft: what belongs here, with one example once entries exist.
+
+      - subcategory: "Logistics and mobility"
+        content: |
+          Draft: what belongs here, with one example once entries exist.
+
+      - subcategory: "HR and future of work"
+        content: |
+          Draft: what belongs here, with one example once entries exist.
+
+      - subcategory: "Cybersecurity"
+        content: |
+          Draft: what belongs here, with one example once entries exist.
+
+  - category: "Research and academia"
+    content: |
+      Draft: one paragraph on what this category covers and where Lebanon stands.
+
+    subcategories:
+      - subcategory: "Universities"
+        content: |
+          Draft: what belongs here, with one example once entries exist.
+
+      - subcategory: "Research centers and labs"
+        content: |
+          Draft: what belongs here, with one example once entries exist.
+
+  - category: "Ecosystem enablers"
+    content: |
+      Draft: one paragraph on what this category covers and where Lebanon stands.
+
+    subcategories:
+      - subcategory: "Investors"
+        content: |
+          Draft: what belongs here, with one example once entries exist.
+
+      - subcategory: "Accelerators and incubators"
+        content: |
+          Draft: what belongs here, with one example once entries exist.
+
+      - subcategory: "Communities and nonprofits"
+        content: |
+          Draft: what belongs here, with one example once entries exist.
+
+      - subcategory: "Government and public bodies"
+        content: |
+          Draft: what belongs here, with one example once entries exist.
+
+  - category: "Lebanese-founded abroad"
+    content: |
+      Draft: one paragraph on what this category covers and where Lebanon stands.
+
+    subcategories:
+      - subcategory: "Diaspora: AI stack"
+        content: |
+          Draft: what belongs here, with one example once entries exist.
+
+      - subcategory: "Diaspora: applied AI"
+        content: |
+          Draft: what belongs here, with one example once entries exist.
+

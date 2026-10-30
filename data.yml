@@ -1,0 +1,413 @@
+# Lebanon AI landscape data
+#
+# One entry per organization, in its primary subcategory. Use `second_path`
+# to show an entry in a second subcategory without duplicating it.
+#
+# Every entry carries `extra.annotations` with the fields below. Annotations
+# are not shown on the site; they keep the data we need for curation and stats.
+#
+#   presence:     hq | team | diaspora
+#   city:         city of the Lebanon office (or the abroad HQ for diaspora)
+#   founded:      year, as a string
+#   verified_by:  entity | public-sources | pending
+#   verified_on:  YYYY-MM-DD
+#
+# Entries named "Placeholder" are scaffolding. Remove each one once its
+# subcategory has a real entry, or merge the subcategory at data freeze.
+#
+# Reference: https://github.com/cncf/landscape2/blob/main/docs/config/data.yml
+
+categories:
+  - name: "Infrastructure and compute"
+    subcategories:
+      - name: "Cloud, hosting and compute"
+        items:
+          - name: "Placeholder: Cloud, hosting and compute"
+            description: "Sample entry. Replace during seed research."
+            homepage_url: https://example.com
+            logo: placeholder.svg
+            extra:
+              annotations:
+                presence: hq
+                city: ""
+                founded: ""
+                verified_by: pending
+                verified_on: ""
+      - name: "MLOps and model deployment"
+        items:
+          - name: "Placeholder: MLOps and model deployment"
+            description: "Sample entry. Replace during seed research."
+            homepage_url: https://example.com
+            logo: placeholder.svg
+            extra:
+              annotations:
+                presence: hq
+                city: ""
+                founded: ""
+                verified_by: pending
+                verified_on: ""
+  - name: "Data"
+    subcategories:
+      - name: "Data platforms and engineering"
+        items:
+          - name: "Placeholder: Data platforms and engineering"
+            description: "Sample entry. Replace during seed research."
+            homepage_url: https://example.com
+            logo: placeholder.svg
+            extra:
+              annotations:
+                presence: hq
+                city: ""
+                founded: ""
+                verified_by: pending
+                verified_on: ""
+      - name: "Data labeling and annotation"
+        items:
+          - name: "Placeholder: Data labeling and annotation"
+            description: "Sample entry. Replace during seed research."
+            homepage_url: https://example.com
+            logo: placeholder.svg
+            extra:
+              annotations:
+                presence: hq
+                city: ""
+                founded: ""
+                verified_by: pending
+                verified_on: ""
+      - name: "Analytics and BI"
+        items:
+          - name: "Placeholder: Analytics and BI"
+            description: "Sample entry. Replace during seed research."
+            homepage_url: https://example.com
+            logo: placeholder.svg
+            extra:
+              annotations:
+                presence: hq
+                city: ""
+                founded: ""
+                verified_by: pending
+                verified_on: ""
+  - name: "Models and core AI"
+    subcategories:
+      - name: "Foundation and language models"
+        items:
+          - name: "Placeholder: Foundation and language models"
+            description: "Sample entry. Replace during seed research."
+            homepage_url: https://example.com
+            logo: placeholder.svg
+            extra:
+              annotations:
+                presence: hq
+                city: ""
+                founded: ""
+                verified_by: pending
+                verified_on: ""
+      - name: "Arabic NLP and speech"
+        items:
+          - name: "Placeholder: Arabic NLP and speech"
+            description: "Sample entry. Replace during seed research."
+            homepage_url: https://example.com
+            logo: placeholder.svg
+            extra:
+              annotations:
+                presence: hq
+                city: ""
+                founded: ""
+                verified_by: pending
+                verified_on: ""
+      - name: "Computer vision"
+        items:
+          - name: "Placeholder: Computer vision"
+            description: "Sample entry. Replace during seed research."
+            homepage_url: https://example.com
+            logo: placeholder.svg
+            extra:
+              annotations:
+                presence: hq
+                city: ""
+                founded: ""
+                verified_by: pending
+                verified_on: ""
+  - name: "Tools and platforms"
+    subcategories:
+      - name: "Agents and automation"
+        items:
+          - name: "Placeholder: Agents and automation"
+            description: "Sample entry. Replace during seed research."
+            homepage_url: https://example.com
+            logo: placeholder.svg
+            extra:
+              annotations:
+                presence: hq
+                city: ""
+                founded: ""
+                verified_by: pending
+                verified_on: ""
+      - name: "Conversational AI"
+        items:
+          - name: "Placeholder: Conversational AI"
+            description: "Sample entry. Replace during seed research."
+            homepage_url: https://example.com
+            logo: placeholder.svg
+            extra:
+              annotations:
+                presence: hq
+                city: ""
+                founded: ""
+                verified_by: pending
+                verified_on: ""
+      - name: "Developer tools"
+        items:
+          - name: "Placeholder: Developer tools"
+            description: "Sample entry. Replace during seed research."
+            homepage_url: https://example.com
+            logo: placeholder.svg
+            extra:
+              annotations:
+                presence: hq
+                city: ""
+                founded: ""
+                verified_by: pending
+                verified_on: ""
+  - name: "Applied AI"
+    subcategories:
+      - name: "Fintech and banking"
+        items:
+          - name: "Placeholder: Fintech and banking"
+            description: "Sample entry. Replace during seed research."
+            homepage_url: https://example.com
+            logo: placeholder.svg
+            extra:
+              annotations:
+                presence: hq
+                city: ""
+                founded: ""
+                verified_by: pending
+                verified_on: ""
+      - name: "Health and life sciences"
+        items:
+          - name: "Placeholder: Health and life sciences"
+            description: "Sample entry. Replace during seed research."
+            homepage_url: https://example.com
+            logo: placeholder.svg
+            extra:
+              annotations:
+                presence: hq
+                city: ""
+                founded: ""
+                verified_by: pending
+                verified_on: ""
+      - name: "Education"
+        items:
+          - name: "Placeholder: Education"
+            description: "Sample entry. Replace during seed research."
+            homepage_url: https://example.com
+            logo: placeholder.svg
+            extra:
+              annotations:
+                presence: hq
+                city: ""
+                founded: ""
+                verified_by: pending
+                verified_on: ""
+      - name: "Retail and e-commerce"
+        items:
+          - name: "Placeholder: Retail and e-commerce"
+            description: "Sample entry. Replace during seed research."
+            homepage_url: https://example.com
+            logo: placeholder.svg
+            extra:
+              annotations:
+                presence: hq
+                city: ""
+                founded: ""
+                verified_by: pending
+                verified_on: ""
+      - name: "Media, marketing and adtech"
+        items:
+          - name: "Placeholder: Media, marketing and adtech"
+            description: "Sample entry. Replace during seed research."
+            homepage_url: https://example.com
+            logo: placeholder.svg
+            extra:
+              annotations:
+                presence: hq
+                city: ""
+                founded: ""
+                verified_by: pending
+                verified_on: ""
+      - name: "Energy, climate and agriculture"
+        items:
+          - name: "Placeholder: Energy, climate and agriculture"
+            description: "Sample entry. Replace during seed research."
+            homepage_url: https://example.com
+            logo: placeholder.svg
+            extra:
+              annotations:
+                presence: hq
+                city: ""
+                founded: ""
+                verified_by: pending
+                verified_on: ""
+      - name: "Legal, government and public sector"
+        items:
+          - name: "Placeholder: Legal, government and public sector"
+            description: "Sample entry. Replace during seed research."
+            homepage_url: https://example.com
+            logo: placeholder.svg
+            extra:
+              annotations:
+                presence: hq
+                city: ""
+                founded: ""
+                verified_by: pending
+                verified_on: ""
+      - name: "Logistics and mobility"
+        items:
+          - name: "Placeholder: Logistics and mobility"
+            description: "Sample entry. Replace during seed research."
+            homepage_url: https://example.com
+            logo: placeholder.svg
+            extra:
+              annotations:
+                presence: hq
+                city: ""
+                founded: ""
+                verified_by: pending
+                verified_on: ""
+      - name: "HR and future of work"
+        items:
+          - name: "Placeholder: HR and future of work"
+            description: "Sample entry. Replace during seed research."
+            homepage_url: https://example.com
+            logo: placeholder.svg
+            extra:
+              annotations:
+                presence: hq
+                city: ""
+                founded: ""
+                verified_by: pending
+                verified_on: ""
+      - name: "Cybersecurity"
+        items:
+          - name: "Placeholder: Cybersecurity"
+            description: "Sample entry. Replace during seed research."
+            homepage_url: https://example.com
+            logo: placeholder.svg
+            extra:
+              annotations:
+                presence: hq
+                city: ""
+                founded: ""
+                verified_by: pending
+                verified_on: ""
+  - name: "Research and academia"
+    subcategories:
+      - name: "Universities"
+        items:
+          - name: "Placeholder: Universities"
+            description: "Sample entry. Replace during seed research."
+            homepage_url: https://example.com
+            logo: placeholder.svg
+            extra:
+              annotations:
+                presence: hq
+                city: ""
+                founded: ""
+                verified_by: pending
+                verified_on: ""
+      - name: "Research centers and labs"
+        items:
+          - name: "Placeholder: Research centers and labs"
+            description: "Sample entry. Replace during seed research."
+            homepage_url: https://example.com
+            logo: placeholder.svg
+            extra:
+              annotations:
+                presence: hq
+                city: ""
+                founded: ""
+                verified_by: pending
+                verified_on: ""
+  - name: "Ecosystem enablers"
+    subcategories:
+      - name: "Investors"
+        items:
+          - name: "Placeholder: Investors"
+            description: "Sample entry. Replace during seed research."
+            homepage_url: https://example.com
+            logo: placeholder.svg
+            extra:
+              annotations:
+                presence: hq
+                city: ""
+                founded: ""
+                verified_by: pending
+                verified_on: ""
+      - name: "Accelerators and incubators"
+        items:
+          - name: "Placeholder: Accelerators and incubators"
+            description: "Sample entry. Replace during seed research."
+            homepage_url: https://example.com
+            logo: placeholder.svg
+            extra:
+              annotations:
+                presence: hq
+                city: ""
+                founded: ""
+                verified_by: pending
+                verified_on: ""
+      - name: "Communities and nonprofits"
+        items:
+          - name: "Placeholder: Communities and nonprofits"
+            description: "Sample entry. Replace during seed research."
+            homepage_url: https://example.com
+            logo: placeholder.svg
+            extra:
+              annotations:
+                presence: hq
+                city: ""
+                founded: ""
+                verified_by: pending
+                verified_on: ""
+      - name: "Government and public bodies"
+        items:
+          - name: "Placeholder: Government and public bodies"
+            description: "Sample entry. Replace during seed research."
+            homepage_url: https://example.com
+            logo: placeholder.svg
+            extra:
+              annotations:
+                presence: hq
+                city: ""
+                founded: ""
+                verified_by: pending
+                verified_on: ""
+  - name: "Lebanese-founded abroad"
+    subcategories:
+      - name: "Diaspora: AI stack"
+        items:
+          - name: "Placeholder: Diaspora: AI stack"
+            description: "Sample entry. Replace during seed research."
+            homepage_url: https://example.com
+            logo: placeholder.svg
+            extra:
+              annotations:
+                presence: diaspora
+                city: ""
+                founded: ""
+                verified_by: pending
+                verified_on: ""
+      - name: "Diaspora: applied AI"
+        items:
+          - name: "Placeholder: Diaspora: applied AI"
+            description: "Sample entry. Replace during seed research."
+            homepage_url: https://example.com
+            logo: placeholder.svg
+            extra:
+              annotations:
+                presence: diaspora
+                city: ""
+                founded: ""
+                verified_by: pending
+                verified_on: ""

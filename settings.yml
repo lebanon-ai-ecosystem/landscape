@@ -1,0 +1,70 @@
+# Lebanon AI landscape settings
+#
+# Working name and URL are placeholders until the project name and domain are
+# chosen (see the project plan, open decisions).
+#
+# Reference: https://github.com/cncf/landscape2/blob/main/docs/config/settings.yml
+
+foundation: Lebanon AI
+
+url: https://example.org
+
+description: A neutral, open source map of the companies, research groups, and enablers building AI in Lebanon.
+
+# Cedar green and flag red, with neutral supporting tones. All seven colors are
+# required whenever this section is present.
+colors:
+  color1: "rgba(0, 122, 72, 1)"
+  color2: "rgba(206, 17, 38, 1)"
+  color3: "rgba(77, 160, 120, 1)"
+  color4: "rgba(0, 51, 31, 0.7)"
+  color5: "rgba(0, 122, 72, 0.7)"
+  color6: "rgba(0, 51, 31, 0.7)"
+  color7: "rgba(198, 232, 214, 1)"
+
+grid_items_size: large
+
+view_mode: grid
+
+header:
+  links:
+    github: "https://github.com/ORG/lebanon-ai-landscape"
+  logo: "assets/header-logo.svg"
+
+footer:
+  links:
+    github: "https://github.com/ORG/lebanon-ai-landscape"
+  logo: "assets/footer-logo.svg"
+
+groups:
+  - name: "Full landscape"
+    alias: all
+    categories:
+      - "Infrastructure and compute"
+      - "Data"
+      - "Models and core AI"
+      - "Tools and platforms"
+      - "Applied AI"
+      - "Research and academia"
+      - "Ecosystem enablers"
+      - "Lebanese-founded abroad"
+  - name: "AI stack"
+    alias: stack
+    categories:
+      - "Infrastructure and compute"
+      - "Data"
+      - "Models and core AI"
+      - "Tools and platforms"
+  - name: "Applied AI"
+    alias: applied
+    categories:
+      - "Applied AI"
+  - name: "Research and enablers"
+    alias: ecosystem
+    categories:
+      - "Research and academia"
+      - "Ecosystem enablers"
+  - name: "Diaspora"
+    alias: diaspora
+    categories:
+      - "Lebanese-founded abroad"
