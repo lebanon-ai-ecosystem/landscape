@@ -3,206 +3,364 @@
 # Category and subcategory names below match data.yml so the guide links to
 # the live boxes. Use heading levels 4 to 6 inside content blocks.
 #
+# Write each box description so it stays true as entries change: say what
+# belongs and what does not, and do not name individual entries.
+#
 # Reference: https://github.com/cncf/landscape2/blob/main/docs/config/guide.yml
 
 categories:
   - category: "Introduction"
     content: |
-      The Lebanon AI Ecosystem landscape maps the companies, research groups, and
-      enablers building artificial intelligence in Lebanon, plus
-      Lebanese-founded AI companies operating abroad.
+      The Lebanon AI Ecosystem landscape maps the organizations building
+      artificial intelligence in Lebanon: companies whose product is AI,
+      universities and research labs, investors, accelerators, communities,
+      and public bodies. It also maps AI companies founded by Lebanese
+      people and headquartered abroad.
 
-      It is a neutral, open source community project. Inclusion follows
-      published criteria and is free. Nobody pays for placement.
+      It is for anyone who needs a clear picture of who does what: founders
+      looking for partners or customers, investors, researchers, students,
+      journalists, and policymakers.
+
+      It is a neutral, open source community project. Listing is free and
+      follows published rules. Nobody pays for placement, and the same rules
+      apply to every organization, including those the maintainers work for.
 
     subcategories:
       - subcategory: "How to read the map"
         content: |
-          The map has five views. The full landscape shows every entry. The
-          AI stack runs from infrastructure and data up through models and
-          tools. Applied AI groups companies by the sector they serve.
-          Research and enablers covers universities, labs, investors,
-          accelerators, communities, and public bodies. Diaspora lists
-          Lebanese-founded companies headquartered abroad.
+          The map has five views, selected at the top of the Explore page:
+
+          - **Full landscape** shows every entry.
+          - **AI stack** runs from infrastructure and data up through models
+            and tools.
+          - **Applied AI** groups companies by the sector they serve.
+          - **Research and enablers** covers universities, labs, investors,
+            accelerators, communities, and public bodies.
+          - **Diaspora** lists AI companies founded by Lebanese people and
+            headquartered abroad.
 
           Each organization appears as its name, in the same font and size as
           every other. The map carries no logos, so no entry stands out
-          because of its branding. Select a name for its details.
+          because of its branding. Select a name for its description and
+          website.
 
-          For presentations, the whole map is available as one 16:9 slide,
-          updated with every change:
-          [PNG](https://lebanon-ai-ecosystem.github.io/landscape/downloads/lebanon-ai-ecosystem-slide.png) or
-          [PDF](https://lebanon-ai-ecosystem.github.io/landscape/downloads/lebanon-ai-ecosystem-slide.pdf).
+          A box appears on the map only once it has at least one entry. This
+          guide describes every box, including those still empty.
 
       - subcategory: "Who qualifies"
         content: |
+          #### Companies
+
           A company qualifies when AI is the product, not one feature of a
-          product, customers can use it today, and the company is
-          headquartered in Lebanon or runs a working team there. Acquired
-          companies qualify on the same terms. Open-source AI projects
-          created by Lebanese people qualify wherever their creators live.
-          The full criteria live in CONTRIBUTING.md in the project
-          repository.
+          product, and customers can use it today. It must be headquartered in
+          Lebanon or run a working team there of at least three full-time
+          people. Acquired companies qualify on the same terms while the
+          product stays live.
+
+          #### Diaspora companies
+
+          The same product bar applies. At least one founder or co-founder is
+          Lebanese, and the company is headquartered abroad.
+
+          #### Open-source projects
+
+          Open-source AI projects created by Lebanese people qualify, wherever
+          their creators live. They sit in the box that matches what they do.
+
+          #### Research, enablers, and public bodies
+
+          - **Universities and labs:** AI research output in the last 24
+            months.
+          - **Investors:** at least one investment in a qualifying AI company.
+          - **Accelerators and incubators:** at least one AI company in a
+            cohort in the last 24 months.
+          - **Communities and nonprofits:** AI events or programs in the last
+            12 months.
+          - **Government bodies:** a formal AI mandate or program.
+
+          #### Out of scope
+
+          Consultancies, agencies, and software houses that build AI for
+          clients without a product of their own; resellers of foreign AI
+          tools; companies in stealth; and organizations with no visible
+          activity in the last 12 months.
+
+          The full criteria, with the evidence required for each type, are in
+          [CONTRIBUTING.md](https://github.com/lebanon-ai-ecosystem/landscape/blob/main/CONTRIBUTING.md).
+
+      - subcategory: "Listing rules"
+        content: |
+          An organization is listed only when all three hold:
+
+          1. **The evidence is strong.** Maintainers rate every candidate high,
+             medium, or low confidence from public sources. Only high and
+             medium candidates are listed. Medium means one criterion still
+             needs checking; maintainers follow up with the organization.
+          2. **A working website is confirmed.** A maintainer opens the
+             homepage before any entry is added.
+          3. **AI is the product, not one feature of a product.** A product
+             that adds an AI feature to something else, such as a platform,
+             an app, or a device, does not qualify, however good the feature.
+
+          Listing does not require the organization's consent, and it is not
+          an endorsement. It records that an organization meets the published
+          criteria, based on public information.
 
       - subcategory: "How to get listed or corrected"
         content: |
-          Open a pull request or an issue in the project repository on
-          GitHub: https://github.com/lebanon-ai-ecosystem/landscape.
-          Maintainers answer correction and removal requests within 7 days.
+          There are two ways, both on GitHub. Each needs a free GitHub
+          account.
+
+          1. **Issue:** fill in the
+             [Add or update an entry](https://github.com/lebanon-ai-ecosystem/landscape/issues/new?template=add-entry.yml)
+             form. For a new entry, a maintainer's approval drafts the change
+             automatically.
+          2. **Pull request:** edit `data.yml` in the
+             [repository](https://github.com/lebanon-ai-ecosystem/landscape)
+             and open a pull request.
+
+          Corrections and removal requests use the same two routes.
+          Maintainers answer them within 7 days. Every change is reviewed and
+          recorded publicly.
+
+      - subcategory: "Governance"
+        content: |
+          The project is run by volunteer maintainers acting in a personal
+          capacity. They are listed, with their affiliations, in
+          [MAINTAINERS.md](https://github.com/lebanon-ai-ecosystem/landscape/blob/main/MAINTAINERS.md).
+
+          A maintainer never approves changes to an entry for an organization
+          they work for, advise, or invest in. Every website on the map is
+          checked automatically each week, and broken ones are reported for
+          review.
+
+          The project follows the Contributor Covenant code of conduct. To
+          raise a concern, open a
+          [Conduct concern](https://github.com/lebanon-ai-ecosystem/landscape/issues/new?template=conduct.yml)
+          issue without any details; a maintainer contacts you privately
+          within 3 days.
+
+      - subcategory: "Downloads and reuse"
+        content: |
+          The download menu at the top of every page offers the map as an
+          image (PNG) or a document (PDF), and the data as CSV files. The
+          image and document are one 16:9 slide, ready for presentations and
+          updated with every change.
+
+          The data and the map are licensed under
+          [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/): reuse
+          them freely with credit to the Lebanon AI Ecosystem project. The
+          code is licensed under Apache 2.0.
 
   - category: "Infrastructure and compute"
     content: |
-      Draft: one paragraph on what this category covers and where Lebanon stands.
+      The base of the AI stack: the computing power, hosting, and tooling
+      that AI systems run on. Public sources show few Lebanon-based
+      companies with their own product at this layer so far. Lebanese-founded
+      companies working at this layer abroad appear under Diaspora: AI stack.
 
     subcategories:
       - subcategory: "Cloud, hosting and compute"
         content: |
-          Draft: what belongs here, with one example once entries exist.
+          Companies that provide the computing capacity AI needs: GPU and
+          cloud services, data centers, and hosting built for training or
+          running models. Resellers of foreign cloud services without a
+          product of their own do not qualify.
 
       - subcategory: "MLOps and model deployment"
         content: |
-          Draft: what belongs here, with one example once entries exist.
+          Products that take models from development into production and keep
+          them working: training pipelines, deployment, serving, monitoring,
+          and evaluation.
 
   - category: "Data"
     content: |
-      Draft: one paragraph on what this category covers and where Lebanon stands.
+      The data layer: products that collect, prepare, label, and analyze the
+      data AI systems learn from and work with. Data services sold as
+      projects to clients, without a product of their own, do not qualify.
 
     subcategories:
       - subcategory: "Data platforms and engineering"
         content: |
-          Draft: what belongs here, with one example once entries exist.
+          Products for storing, moving, and preparing data for AI: data
+          platforms, pipelines, vector databases, and synthetic data tools.
 
       - subcategory: "Data labeling and annotation"
         content: |
-          Draft: what belongs here, with one example once entries exist.
+          Products and platforms for labeling text, speech, images, and video
+          to train and evaluate AI models, including Arabic and dialect data.
 
       - subcategory: "Analytics and BI"
         content: |
-          Draft: what belongs here, with one example once entries exist.
+          Analytics and business intelligence products where AI produces the
+          insight itself: forecasting, anomaly detection, or answers to
+          questions about data. Dashboards with an added AI feature do not
+          qualify.
 
   - category: "Models and core AI"
     content: |
-      Draft: one paragraph on what this category covers and where Lebanon stands.
+      Organizations that build AI models and core capabilities rather than
+      applications. Arabic language and speech has its own box, given the
+      particular needs of Arabic and its spoken dialects.
 
     subcategories:
       - subcategory: "Foundation and language models"
         content: |
-          Draft: what belongs here, with one example once entries exist.
+          Organizations that train or substantially adapt their own large
+          models, including language, multimodal, and world models. Products
+          that only call another company's model belong in the box for what
+          they do.
 
       - subcategory: "Arabic NLP and speech"
         content: |
-          Draft: what belongs here, with one example once entries exist.
+          Products whose core is understanding or generating Arabic: text
+          analysis, translation, speech recognition, and speech synthesis,
+          including Lebanese and other spoken dialects.
 
       - subcategory: "Computer vision"
         content: |
-          Draft: what belongs here, with one example once entries exist.
+          Products whose core is understanding images and video: recognition,
+          inspection, document reading, and visual search.
 
   - category: "Tools and platforms"
     content: |
-      Draft: one paragraph on what this category covers and where Lebanon stands.
+      Products that let other teams build with AI: agent platforms,
+      conversational AI, and developer tools. Products where an AI chatbot or
+      assistant is one feature of a wider platform do not qualify.
 
     subcategories:
       - subcategory: "Agents and automation"
         content: |
-          Draft: what belongs here, with one example once entries exist.
+          Platforms for building or running AI agents that plan and complete
+          tasks across tools and systems.
 
       - subcategory: "Conversational AI"
         content: |
-          Draft: what belongs here, with one example once entries exist.
+          Products whose core is AI conversation: assistants and chatbots for
+          customer service, sales, or support, sold as the product itself.
 
       - subcategory: "Developer tools"
         content: |
-          Draft: what belongs here, with one example once entries exist.
+          Tools for people building AI software: AI coding assistants, model
+          and prompt testing, APIs, and SDKs.
 
   - category: "Applied AI"
     content: |
-      Draft: one paragraph on what this category covers and where Lebanon stands.
+      Companies that apply AI to a specific sector, grouped by the sector
+      they serve. Most Lebanese AI companies found so far work here. Each company
+      sits in one box, chosen by what its product does rather than who buys
+      it.
 
     subcategories:
       - subcategory: "Fintech and banking"
         content: |
-          Draft: what belongs here, with one example once entries exist.
+          AI products for banking, payments, credit, insurance, and
+          investment, where AI makes the core decision or delivers the core
+          service.
 
       - subcategory: "Health and life sciences"
         content: |
-          Draft: what belongs here, with one example once entries exist.
+          AI products for diagnosis, clinical work, drug discovery, and health
+          monitoring.
 
       - subcategory: "Education"
         content: |
-          Draft: what belongs here, with one example once entries exist.
+          AI products for learning and teaching: tutors, adaptive learning,
+          assessment, and AI-led courses.
 
       - subcategory: "Retail and e-commerce"
         content: |
-          Draft: what belongs here, with one example once entries exist.
+          AI products for retail and online commerce: personalization,
+          demand forecasting, pricing, and visual search.
 
       - subcategory: "Media, marketing and adtech"
         content: |
-          Draft: what belongs here, with one example once entries exist.
+          AI products for content, media, and advertising: content
+          generation, audience analytics, and ad targeting.
 
       - subcategory: "Energy, climate and agriculture"
         content: |
-          Draft: what belongs here, with one example once entries exist.
+          AI products for energy systems, climate, and farming: solar and grid
+          management, emissions tracking, and precision agriculture.
 
       - subcategory: "Legal and compliance"
         content: |
-          Draft: what belongs here, with one example once entries exist.
+          AI products for legal work and regulatory compliance: drafting,
+          review, legal research, and compliance checks.
 
       - subcategory: "Logistics and mobility"
         content: |
-          Draft: what belongs here, with one example once entries exist.
+          AI products for transport and supply chains: routing, fleet
+          optimization, demand planning, and autonomous systems.
 
       - subcategory: "HR and future of work"
         content: |
-          Draft: what belongs here, with one example once entries exist.
+          AI products for hiring and work: candidate matching, skills
+          assessment, and workforce planning.
 
       - subcategory: "Cybersecurity"
         content: |
-          Draft: what belongs here, with one example once entries exist.
+          Security products whose core is AI: threat detection, fraud
+          prevention, and automated response.
 
   - category: "Research and academia"
     content: |
-      Draft: one paragraph on what this category covers and where Lebanon stands.
+      Universities and research centers producing AI research, training AI
+      talent, or running AI programs. Each university and each named lab or
+      center is a separate entry, so a lab appears alongside its university.
 
     subcategories:
       - subcategory: "Universities"
         content: |
-          Draft: what belongs here, with one example once entries exist.
+          Universities in Lebanon with AI research output in the last 24
+          months: publications, funded projects, or released code.
 
       - subcategory: "Research centers and labs"
         content: |
-          Draft: what belongs here, with one example once entries exist.
+          Named AI labs, centers, and institutes, inside a university or
+          independent, with research output in the last 24 months.
 
   - category: "Ecosystem enablers"
     content: |
-      Draft: one paragraph on what this category covers and where Lebanon stands.
+      The organizations that fund, support, connect, and govern AI work in
+      Lebanon, without building AI products themselves.
 
     subcategories:
       - subcategory: "Investors"
         content: |
-          Draft: what belongs here, with one example once entries exist.
+          Venture funds, angel networks, and other investors with at least one
+          investment in a qualifying AI company, in Lebanon or founded by
+          Lebanese people abroad.
 
       - subcategory: "Accelerators and incubators"
         content: |
-          Draft: what belongs here, with one example once entries exist.
+          Programs and hubs that have supported at least one AI company in a
+          cohort in the last 24 months.
 
       - subcategory: "Communities and nonprofits"
         content: |
-          Draft: what belongs here, with one example once entries exist.
+          Communities, nonprofits, and networks that held AI events or
+          programs in the last 12 months, including diaspora networks.
 
       - subcategory: "Government and public bodies"
         content: |
-          Draft: what belongs here, with one example once entries exist.
+          Ministries and public bodies with a formal AI mandate, strategy, or
+          program.
 
   - category: "Lebanese-founded abroad"
     content: |
-      Draft: one paragraph on what this category covers and where Lebanon stands.
+      AI companies founded or co-founded by Lebanese people and headquartered
+      outside Lebanon. They meet the same product bar as companies in
+      Lebanon. A diaspora company with a working team in Lebanon of at least
+      three full-time people is listed as a Lebanese company instead.
 
     subcategories:
       - subcategory: "Diaspora: AI stack"
         content: |
-          Draft: what belongs here, with one example once entries exist.
+          Diaspora companies building at the AI stack layers: infrastructure,
+          data, models, and tools for building with AI.
 
       - subcategory: "Diaspora: applied AI"
         content: |
-          Draft: what belongs here, with one example once entries exist.
-
+          Diaspora companies applying AI to a specific sector, such as health,
+          hiring, or industry.
