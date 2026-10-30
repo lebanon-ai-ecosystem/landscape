@@ -246,10 +246,10 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: medium
-          - name: "Universite Saint-Joseph"
+          - name: "Université Saint-Joseph de Beyrouth"
             description: "University running the Center for Digital Innovation and Artificial Intelligence (CINIA)."
             homepage_url: https://www.usj.edu.lb
-            logo: universite-saint-joseph.svg
+            logo: universite-saint-joseph-de-beyrouth.svg
             extra:
               annotations:
                 presence: hq
@@ -298,7 +298,7 @@ categories:
                 verified_on: "2026-10-30"
                 confidence: high
           - name: "USJ CINIA"
-            description: "Center for Digital Innovation and Artificial Intelligence at Universite Saint-Joseph."
+            description: "Center for Digital Innovation and Artificial Intelligence at Université Saint-Joseph de Beyrouth."
             homepage_url: https://cinia.blogs.usj.edu.lb/
             logo: usj-cinia.svg
             extra:
