@@ -67,19 +67,7 @@ categories:
                 verified_on: "2026-10-30"
                 confidence: medium
       - name: "Computer vision"
-        items:
-          - name: "inmind.ai"
-            description: "AI, computer vision, robotics software and digital twin solutions for industry. Lebanon office in Mkalles; headquarters in Greenville, South Carolina."
-            homepage_url: https://inmind.ai
-            logo: inmind-ai.svg
-            extra:
-              annotations:
-                presence: team
-                city: "Mkalles"
-                founded: "2018"
-                verified_by: public-sources
-                verified_on: "2026-10-30"
-                confidence: medium
+        items: []
   - name: "Tools and platforms"
     subcategories:
       - name: "Agents and automation"
@@ -179,7 +167,7 @@ categories:
       - name: "Logistics and mobility"
         items:
           - name: "FleetRunnr"
-            description: "First-to-last-mile delivery management software with AI route allocation and AI-assisted dispatch."
+            description: "First-to-last-mile delivery management software with AI-powered dispatch and route allocation. Dubai-based; Lebanon presence to confirm."
             homepage_url: https://www.fleetrunnr.com
             logo: fleetrunnr.svg
             extra:
@@ -498,7 +486,7 @@ categories:
                 founded: "1994"
                 verified_by: public-sources
                 verified_on: "2026-10-30"
-                confidence: high
+                confidence: medium
   - name: "Lebanese-founded abroad"
     subcategories:
       - name: "Diaspora: AI stack"
