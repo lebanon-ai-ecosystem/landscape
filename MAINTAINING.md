@@ -60,6 +60,7 @@ Names must match exactly across files, including capitalization and punctuation.
 - The "build" check is green.
 - Every new or renamed name matches across all files in the table above.
 - Each new entry meets the inclusion criteria and has its evidence in the PR or linked issue.
+- Each new entry passes the three listing rules in CONTRIBUTING.md: high or medium confidence, a homepage you opened, and an AI product of its own (no consultancies).
 - No files were added to `logos/` (they are generated; see CONTRIBUTING.md, "Names, not logos").
 - A second maintainer approved it, and neither approver works for, advises, or invests in the organization concerned.
 

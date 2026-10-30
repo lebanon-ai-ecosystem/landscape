@@ -14,7 +14,6 @@
 #   verified_on:  YYYY-MM-DD
 #   confidence:   high | medium (seed research rating; medium means one
 #                 inclusion criterion still needs checking)
-#   consent:      pending | given (the organization confirmed its listing)
 #
 # `logo` is a file name only (lowercase name with hyphens, .svg). The image is
 # generated from `name` by scripts/generate-name-logos.py; there are no
@@ -49,28 +48,26 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: medium
-                consent: pending
   - name: "Models and core AI"
     subcategories:
       - name: "Foundation and language models"
         items: []
       - name: "Arabic NLP and speech"
-        items: []
-      - name: "Computer vision"
         items:
-          - name: "inmind.ai"
-            description: "AI, computer vision, robotics software and digital twin solutions for industry. Lebanon office in Mkalles; headquarters in Greenville, South Carolina."
-            homepage_url: https://inmind.ai
-            logo: inmind-ai.svg
+          - name: "Aralects"
+            description: "AI-powered app for learning spoken Arabic dialects, with Arabic NLP and annotation work. Registered in the UAE; engineering team in Beirut."
+            homepage_url: https://aralects.com
+            logo: aralects.svg
             extra:
               annotations:
                 presence: team
-                city: "Mkalles"
-                founded: "2018"
+                city: "Beirut"
+                founded: ""
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: medium
-                consent: pending
+      - name: "Computer vision"
+        items: []
   - name: "Tools and platforms"
     subcategories:
       - name: "Agents and automation"
@@ -99,7 +96,6 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: medium
-                consent: pending
           - name: "Kamkalima"
             description: "Arabic reading and writing platform for schools, with an AI writing assistant and AI-assisted correction."
             homepage_url: https://kamkalima.com
@@ -112,7 +108,6 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: high
-                consent: pending
           - name: "Zaker"
             description: "AI study and teaching tools for universities: adaptive quizzes from course materials, early alerts on struggling students, and a syllabus-grounded AI tutor."
             homepage_url: https://zaker.io
@@ -125,7 +120,6 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: medium
-                consent: pending
       - name: "Retail and e-commerce"
         items: []
       - name: "Media, marketing and adtech"
@@ -144,7 +138,6 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: medium
-                consent: pending
           - name: "NuWatt"
             description: "Hardware-free AI solar monitoring and energy management for homeowners and installers."
             homepage_url: https://nuwatt.co
@@ -157,7 +150,6 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: high
-                consent: pending
       - name: "Legal and compliance"
         items:
           - name: "HAQQ Legal AI"
@@ -172,11 +164,34 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: high
-                consent: pending
       - name: "Logistics and mobility"
-        items: []
+        items:
+          - name: "FleetRunnr"
+            description: "First-to-last-mile delivery management software with AI-powered dispatch and route allocation. Dubai-based; Lebanon presence to confirm."
+            homepage_url: https://www.fleetrunnr.com
+            logo: fleetrunnr.svg
+            extra:
+              annotations:
+                presence: unconfirmed
+                city: ""
+                founded: ""
+                verified_by: public-sources
+                verified_on: "2026-10-30"
+                confidence: medium
       - name: "HR and future of work"
-        items: []
+        items:
+          - name: "JOBSEEQR"
+            description: "AI talent matching and applicant tracking for hiring Lebanese talent, with personalized learning paths for candidates."
+            homepage_url: https://jobseeqr.co
+            logo: jobseeqr.svg
+            extra:
+              annotations:
+                presence: hq
+                city: ""
+                founded: ""
+                verified_by: public-sources
+                verified_on: "2026-10-30"
+                confidence: medium
       - name: "Cybersecurity"
         items: []
   - name: "Research and academia"
@@ -195,7 +210,6 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: high
-                consent: pending
           - name: "Lebanese American University"
             description: "University with an Artificial Intelligence and Cyber Systems research center and an MS in Applied AI."
             homepage_url: https://www.lau.edu.lb
@@ -208,7 +222,6 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: high
-                consent: pending
           - name: "Lebanese University"
             description: "Lebanon's public university; partner in an AI and robotics curriculum project and in the national Oracle AI training program."
             homepage_url: https://www.ul.edu.lb
@@ -221,7 +234,6 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: medium
-                consent: pending
           - name: "Universite Saint-Joseph"
             description: "University running the Center for Digital Innovation and Artificial Intelligence (CINIA)."
             homepage_url: https://www.usj.edu.lb
@@ -234,7 +246,6 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: high
-                consent: pending
       - name: "Research centers and labs"
         items:
           - name: "AUB MIND Lab"
@@ -250,7 +261,6 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: high
-                consent: pending
           - name: "CMA CGM AI and Insights Institute"
             description: "AI and data science institute at AUB, created with CMA CGM in September 2026; clusters include logistics optimization, forecasting and sustainable operations."
             homepage_url: https://www.cmacgm-group.com/fr/news-media/aub-and-cma-cgm-group-partnership-create-cma-cgm-artificial-intelligence-and-insights-institute
@@ -263,7 +273,6 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: medium
-                consent: pending
           - name: "LAU AICS Research Center"
             description: "Artificial Intelligence and Cyber Systems research center at the Lebanese American University."
             homepage_url: https://www.lau.edu.lb/about/centers-institutes/
@@ -276,7 +285,6 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: high
-                consent: pending
           - name: "USJ CINIA"
             description: "Center for Digital Innovation and Artificial Intelligence at Universite Saint-Joseph."
             homepage_url: https://cinia.blogs.usj.edu.lb/
@@ -289,7 +297,6 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: high
-                consent: pending
   - name: "Ecosystem enablers"
     subcategories:
       - name: "Investors"
@@ -306,7 +313,6 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: medium
-                consent: pending
           - name: "IM Capital"
             description: "Early-stage investment program under IM Fndng providing matching capital, equity guarantees and technical assistance; an early investor in Kamkalima."
             homepage_url: https://im-fndng.com
@@ -319,7 +325,6 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: medium
-                consent: pending
           - name: "Razor Capital"
             description: "London-based venture firm focused on emerging markets; invested in HAQQ Legal AI."
             homepage_url: https://www.razorcap.co
@@ -332,7 +337,6 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: high
-                consent: pending
           - name: "Sowlutions Ventures"
             description: "Tech-for-equity investor and accelerator for early-stage startups; led HAQQ Legal AI's seed round."
             homepage_url: https://sowlutions.com
@@ -345,7 +349,6 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: high
-                consent: pending
       - name: "Accelerators and incubators"
         items:
           - name: "Beirut Digital District"
@@ -360,7 +363,6 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: high
-                consent: pending
           - name: "Berytech"
             description: "Innovation parks, accelerators and funds supporting Lebanese startups, including AI ventures."
             homepage_url: https://berytech.org
@@ -373,7 +375,6 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: high
-                consent: pending
           - name: "Flat6Labs Beirut"
             description: "Seed program and early-stage fund for Lebanese startups, run by Flat6Labs; eFlow is an alumnus."
             homepage_url: https://www.flat6labs.com
@@ -386,7 +387,6 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: medium
-                consent: pending
           - name: "Zein AUB iPark"
             description: "AUB's startup incubator and accelerator, based at Beirut Digital District."
             homepage_url: https://sites.aub.edu.lb/ipark/
@@ -399,7 +399,6 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: high
-                consent: pending
       - name: "Communities and nonprofits"
         items:
           - name: "Beirut AI"
@@ -414,7 +413,6 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: medium
-                consent: pending
           - name: "GDG Coast Lebanon"
             description: "Google Developer Group chapter in Lebanon; runs Build with AI events, DevFest Beirut and community meetups."
             homepage_url: https://gdg.community.dev/gdg-coast-lebanon/
@@ -427,7 +425,6 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: medium
-                consent: pending
           - name: "Lebanese in AI"
             description: "Global community of Lebanese AI practitioners with monthly meetups and an online workspace."
             homepage_url: https://buttondown.com/lebaneseinai
@@ -440,7 +437,6 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: high
-                consent: pending
           - name: "LebNet"
             description: "Lebanese diaspora technology network in North America, with AI-focused webinars and founder programs."
             homepage_url: https://lebnet.us
@@ -453,7 +449,6 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: medium
-                consent: pending
           - name: "ZAKA"
             description: "AI education platform and community builder; started the Beirut AI community and co-organized the Lebanon AI Festival."
             homepage_url: https://zaka.ai
@@ -466,7 +461,6 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: high
-                consent: pending
       - name: "Government and public bodies"
         items:
           - name: "Ministry of State for Technology and AI"
@@ -481,7 +475,18 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: high
-                consent: pending
+          - name: "OMSAR"
+            description: "Office of the Minister of State for Administrative Reform; administers the World Bank-backed digital transformation programme covering AI and cybersecurity."
+            homepage_url: https://omsar.gov.lb
+            logo: omsar.svg
+            extra:
+              annotations:
+                presence: hq
+                city: "Beirut"
+                founded: "1994"
+                verified_by: public-sources
+                verified_on: "2026-10-30"
+                confidence: medium
   - name: "Lebanese-founded abroad"
     subcategories:
       - name: "Diaspora: AI stack"
@@ -498,7 +503,6 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: medium
-                consent: pending
           - name: "Bounty"
             description: "Marketplace where clients post tasks and AI agents bid to complete them, with payment after the result is checked."
             homepage_url: https://trybounty.ai
@@ -511,7 +515,18 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: medium
-                consent: pending
+          - name: "Integral AI"
+            description: "Foundation world models for embodied AI and robotics, based in Tokyo. Co-founder and CEO Jad Tarifi was born in Lebanon."
+            homepage_url: https://integral.ai
+            logo: integral-ai.svg
+            extra:
+              annotations:
+                presence: diaspora
+                city: "Tokyo"
+                founded: "2021"
+                verified_by: public-sources
+                verified_on: "2026-10-30"
+                confidence: medium
           - name: "Klangoo"
             description: "NLP API and Magnet, an audience-engagement tool for online publishers. Headquartered in Hoboken, New Jersey."
             homepage_url: https://klangoo.com
@@ -524,9 +539,32 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: medium
-                consent: pending
+          - name: "Writer"
+            description: "Enterprise generative AI platform with its own Palmyra models. Co-founder and CEO May Habib was born in Lebanon."
+            homepage_url: https://writer.com
+            logo: writer.svg
+            extra:
+              annotations:
+                presence: diaspora
+                city: "San Francisco"
+                founded: "2020"
+                verified_by: public-sources
+                verified_on: "2026-10-30"
+                confidence: high
       - name: "Diaspora: applied AI"
         items:
+          - name: "Kanz"
+            description: "AI-powered recruitment platform that screens and assesses candidates and gives each one feedback. Founded by Roy Baladi; based in Riyadh."
+            homepage_url: https://ka.nz
+            logo: kanz.svg
+            extra:
+              annotations:
+                presence: diaspora
+                city: "Riyadh"
+                founded: ""
+                verified_by: public-sources
+                verified_on: "2026-10-30"
+                confidence: medium
           - name: "Revilico"
             description: "Revilico OS combines simulation, AI models and wet-lab experiments to speed up small-molecule drug discovery."
             homepage_url: https://revilico.bio
@@ -539,4 +577,15 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: medium
-                consent: pending
+          - name: "Sensio Air"
+            description: "Indoor air sensor that uses neural networks to identify allergens, pollutants and pathogens. Founded by Cyrille Najjar and Dr. Eve Tamraz."
+            homepage_url: https://www.sensioair.com
+            logo: sensio-air.svg
+            extra:
+              annotations:
+                presence: diaspora
+                city: "Sunnyvale"
+                founded: "2016"
+                verified_by: public-sources
+                verified_on: "2026-10-30"
+                confidence: medium

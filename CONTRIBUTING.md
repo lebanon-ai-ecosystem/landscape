@@ -24,6 +24,14 @@ Every change, from any route, lands as a reviewed commit.
 
 **Out of scope:** agencies and consultancies selling AI services without a product, resellers of foreign AI tools, companies in stealth, and organizations with no visible activity in 12 months.
 
+## Listing rules
+
+An entry goes on the landscape only when all three hold:
+
+1. **Confidence is high or medium.** Entries rated low stay in the maintainers' research tracker and are not listed until new evidence raises them.
+2. **A working website is confirmed.** A maintainer opens the homepage before merging. No website, no listing.
+3. **The organization has an AI product of its own.** Consultancies, agencies and software houses that build AI for clients without a product of their own are excluded, however strong their AI work.
+
 ## Entry format
 
 ```yaml
