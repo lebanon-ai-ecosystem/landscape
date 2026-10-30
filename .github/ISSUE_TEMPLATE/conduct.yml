@@ -1,0 +1,38 @@
+name: Conduct concern (CoC)
+description: Ask a maintainer to contact you privately about a code of conduct concern. Do not describe the concern here.
+title: "[CoC] Please contact me"
+labels: ["coc"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This issue is public. Do not describe what happened, and do not name anyone.**
+
+        Submitting it only tells the maintainers that you want to talk. A maintainer will contact you privately within 3 days and the conversation continues there. See CODE_OF_CONDUCT.md for how that works.
+  - type: dropdown
+    id: contact
+    attributes:
+      label: How should a maintainer reach you?
+      options:
+        - Invite me to a private GitHub repository for this report
+        - Use the contact details on my GitHub profile
+    validations:
+      required: true
+  - type: dropdown
+    id: involves
+    attributes:
+      label: Does the concern involve a maintainer?
+      description: If yes, the maintainer concerned will not handle it.
+      options:
+        - "No"
+        - "Yes"
+        - I would rather not say here
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have not included any details of the concern in this issue.
+          required: true

@@ -5,7 +5,7 @@ Listing is free and follows the criteria below. Nobody pays for placement, and t
 ## Two ways to submit
 
 1. **Pull request.** Add your entry to `data.yml`. No logo file is needed.
-2. **Issue.** Open a new issue with the ["Add or update an entry" form](https://github.com/lebanon-ai-ecosystem/landscape/issues/new/choose). A maintainer turns it into a pull request.
+2. **Issue.** Open a new issue with the ["Add or update an entry" form](https://github.com/lebanon-ai-ecosystem/landscape/issues/new?template=add-entry.yml). Write "Proposed subcategory" exactly as it appears on the map. When a maintainer approves a new entry, a workflow drafts the pull request and links it in the issue.
 
 Both need a free GitHub account. Every change lands as a reviewed commit.
 
@@ -13,7 +13,7 @@ Both need a free GitHub account. Every change lands as a reviewed commit.
 
 | Entity type | Qualifies when | Evidence we need |
 | --- | --- | --- |
-| Company in Lebanon | AI is core to a live product or service customers can use today; headquartered in Lebanon or runs a working team there (at least TEAM_FLOOR_TBD full-time people) | Public product page; Lebanese registration or a team visible on public profiles |
+| Company in Lebanon | AI is core to a live product or service customers can use today; headquartered in Lebanon or runs a working team there (at least 3 full-time people) | Public product page; Lebanese registration or a team visible on public profiles |
 | Diaspora company | Same product bar; at least one Lebanese founder or co-founder; headquarters and team abroad | Public product page; founder's public profile |
 | Research | University lab or research center with AI research output in the last 24 months | Publications, funded projects, or released code |
 | Investor | At least one investment in an AI company that qualifies above | Portfolio page or announcement |
