@@ -1,0 +1,11 @@
+{
+  "_comment": "One header color per category, applied after the landscape2 build by scripts/apply-category-colors.py. Keys must match category names in data.yml exactly. Every color passes WCAG AA (4.5:1) against white text. Categories missing here fall back to color5/color6 in settings.yml.",
+  "Infrastructure and compute": "#1F4E79",
+  "Data": "#00796B",
+  "Models and core AI": "#6A1B9A",
+  "Tools and platforms": "#AD1457",
+  "Applied AI": "#007A48",
+  "Research and academia": "#A84B06",
+  "Ecosystem enablers": "#455A64",
+  "Lebanese-founded abroad": "#C8102E"
+}

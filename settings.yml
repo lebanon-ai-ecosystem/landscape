@@ -1,25 +1,29 @@
-# Lebanon AI landscape settings
+# Lebanon AI Ecosystem settings
 #
-# Working name and URL are placeholders until the project name and domain are
-# chosen (see the project plan, open decisions).
+# Hosted on GitHub Pages at https://lebanon-ai-ecosystem.github.io/landscape
+# until a custom domain is set. When the custom domain goes live, change `url`
+# to it and delete `base_path`.
 #
 # Reference: https://github.com/cncf/landscape2/blob/main/docs/config/settings.yml
 
-foundation: Lebanon AI
+foundation: Lebanon AI Ecosystem
 
-url: https://example.org
+url: https://lebanon-ai-ecosystem.github.io/landscape
+
+base_path: /landscape
 
 description: A neutral, open source map of the companies, research groups, and enablers building AI in Lebanon.
 
-# Cedar green and flag red, with neutral supporting tones. All seven colors are
-# required whenever this section is present.
+# Site colors. All seven are required whenever this section is present.
+# color5 and color6 are the fallback category colors; per-category colors live
+# in category-colors.json and are applied after the build.
 colors:
   color1: "rgba(0, 122, 72, 1)"
   color2: "rgba(206, 17, 38, 1)"
   color3: "rgba(77, 160, 120, 1)"
   color4: "rgba(0, 51, 31, 0.7)"
-  color5: "rgba(0, 122, 72, 0.7)"
-  color6: "rgba(0, 51, 31, 0.7)"
+  color5: "rgba(0, 122, 72, 1)"
+  color6: "rgba(69, 90, 100, 1)"
   color7: "rgba(198, 232, 214, 1)"
 
 grid_items_size: large
@@ -28,12 +32,12 @@ view_mode: grid
 
 header:
   links:
-    github: "https://github.com/ORG/lebanon-ai-landscape"
+    github: "https://github.com/lebanon-ai-ecosystem/landscape"
   logo: "assets/header-logo.svg"
 
 footer:
   links:
-    github: "https://github.com/ORG/lebanon-ai-landscape"
+    github: "https://github.com/lebanon-ai-ecosystem/landscape"
   logo: "assets/footer-logo.svg"
 
 groups:

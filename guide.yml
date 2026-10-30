@@ -1,4 +1,4 @@
-# Lebanon AI landscape guide
+# Lebanon AI Ecosystem guide
 #
 # Category and subcategory names below match data.yml so the guide links to
 # the live boxes. Use heading levels 4 to 6 inside content blocks.
@@ -8,7 +8,7 @@
 categories:
   - category: "Introduction"
     content: |
-      The Lebanon AI landscape maps the companies, research groups, and
+      The Lebanon AI Ecosystem landscape maps the companies, research groups, and
       enablers building artificial intelligence in Lebanon, plus
       Lebanese-founded AI companies operating abroad.
 

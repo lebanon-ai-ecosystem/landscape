@@ -51,8 +51,13 @@ jobs:
             --guide-file guide.yml \
             --logos-path logos \
             --output-dir build
-          # Single-page app: unknown paths must serve the app.
-          cp build/index.html build/404.html
+
+      - name: Apply category colors
+        run: python3 scripts/apply-category-colors.py build category-colors.json
+
+      - name: SPA fallback
+        # Single-page app: unknown paths must serve the app.
+        run: cp build/index.html build/404.html
 
       - name: Upload site
         if: github.event_name != 'pull_request'

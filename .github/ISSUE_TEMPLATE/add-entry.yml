@@ -1,5 +1,5 @@
 name: Add or update an entry
-description: Propose an organization for the Lebanon AI landscape, or correct an existing entry.
+description: Propose an organization for the Lebanon AI Ecosystem landscape, or correct an existing entry.
 title: "[Entry] "
 labels: ["entry"]
 body:
