@@ -73,19 +73,7 @@ categories:
       - name: "Agents and automation"
         items: []
       - name: "Conversational AI"
-        items:
-          - name: "Chatberry"
-            description: "WhatsApp marketing and automation platform on the official WhatsApp API, with an AI chatbot that answers customer questions and sales inquiries."
-            homepage_url: https://chatberry.net
-            logo: chatberry.svg
-            extra:
-              annotations:
-                presence: hq
-                city: "Beirut"
-                founded: "2024"
-                verified_by: public-sources
-                verified_on: "2026-10-30"
-                confidence: medium
+        items: []
       - name: "Developer tools"
         items: []
   - name: "Applied AI"
