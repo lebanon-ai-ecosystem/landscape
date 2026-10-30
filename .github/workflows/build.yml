@@ -41,6 +41,17 @@ jobs:
           landscape2 validate settings --settings-file settings.yml
           landscape2 validate guide --guide-file guide.yml
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate name logos
+        # Every entry's logo is its name at one shared type size. See
+        # scripts/generate-name-logos.py.
+        run: |
+          python3 -m pip install --quiet "fonttools==4.66.1" "PyYAML==6.0.3"
+          python3 scripts/generate-name-logos.py data.yml logos
+
       - name: Build
         env:
           GITHUB_TOKENS: ${{ secrets.LANDSCAPE_GITHUB_TOKENS }}

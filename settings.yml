@@ -60,13 +60,6 @@ groups:
       - "Research and academia"
       - "Ecosystem enablers"
       - "Lebanese-founded abroad"
-  - name: "AI stack"
-    alias: stack
-    categories:
-      - "Infrastructure and compute"
-      - "Data"
-      - "Models and core AI"
-      - "Tools and platforms"
   - name: "Applied AI"
     alias: applied
     categories:
@@ -76,7 +69,16 @@ groups:
     categories:
       - "Research and academia"
       - "Ecosystem enablers"
-  - name: "Diaspora"
-    alias: diaspora
-    categories:
-      - "Lebanese-founded abroad"
+# Hidden until they have entries (an empty view shows "no items found").
+# To restore a view, uncomment its block.
+#   - name: "AI stack"
+#     alias: stack
+#     categories:
+#       - "Infrastructure and compute"
+#       - "Data"
+#       - "Models and core AI"
+#       - "Tools and platforms"
+#   - name: "Diaspora"
+#     alias: diaspora
+#     categories:
+#       - "Lebanese-founded abroad"

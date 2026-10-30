@@ -12,8 +12,9 @@
 #   verified_by:  entity | public-sources | pending
 #   verified_on:  YYYY-MM-DD
 #
-# Logos named *.svg with a dashed "logo pending" tile are stand-ins until the
-# organization supplies or approves its own SVG.
+# `logo` is a file name only (lowercase name with hyphens, .svg). The image is
+# generated from `name` by scripts/generate-name-logos.py; there are no
+# organization logos in this landscape.
 #
 # Reference: https://github.com/cncf/landscape2/blob/main/docs/config/data.yml
 
@@ -86,7 +87,7 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 consent: pending
-      - name: "Legal, government and public sector"
+      - name: "Legal and compliance"
         items:
           - name: "HAQQ Legal AI"
             description: "AI operating system for legal work, combining drafting, review and legal reasoning with practice management."
