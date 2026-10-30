@@ -3,3 +3,4 @@ build/
 .DS_Store
 # Generated from data.yml by scripts/generate-name-logos.py
 logos/*.svg
+__pycache__/

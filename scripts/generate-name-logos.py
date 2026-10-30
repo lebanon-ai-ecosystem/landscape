@@ -6,12 +6,14 @@ set in black Inter SemiBold and outlined to SVG paths, so the files never
 depend on installed fonts and no trademark is reproduced.
 
 One type size for every entry: the script finds the size each name needs to
-fit (at most MAX_SIZE, wrapped to at most MAX_LINES lines) and renders every
+fit (at most MAX_SIZE, wrapped to at most MAX_LINES lines, breaking after a
+hyphen only when a name cannot fit otherwise) and renders every
 name at the smallest of those sizes. No entry is set larger than another.
 
 Usage: python3 scripts/generate-name-logos.py [data.yml] [logos dir]
 Runs in CI before the build. Generated files are not committed.
 """
+import re
 import sys
 from html import escape
 from itertools import combinations
@@ -26,7 +28,7 @@ FONT = Path(__file__).with_name("fonts") / "Inter-SemiBold.otf"
 W, H = 240, 240      # canvas; landscape2 scales it to the grid tile
 PAD = 6              # side padding
 MAX_W = W - 2 * PAD
-MAX_SIZE = 32        # largest type size any name can get
+MAX_SIZE = 39.5      # largest type size any name can get (decided 2026-10-30)
 MIN_SIZE = 22        # below this the map gets hard to read; fail instead
 MAX_LINES = 4
 LEADING = 1.22
@@ -69,17 +71,35 @@ class Face:
         return " ".join(out)
 
 
+def tokens(name):
+    """Words, with hyphenated words also breakable after the hyphen."""
+    return [t for t in re.split(r"(?<=-)(?=\S)|\s+", name) if t]
+
+
+def join(parts):
+    """Rejoin tokens: no space after a token that ends in a hyphen."""
+    out = parts[0]
+    for prev, t in zip(parts, parts[1:]):
+        out += t if prev.endswith("-") else " " + t
+    return out
+
+
 def wrap(face, name, size):
-    """Fewest lines that fit at this size, then the most even lengths."""
-    words = name.split()
+    """Fewest lines that fit at this size; then fewest breaks at a hyphen;
+    then the most even line lengths."""
+    words = tokens(name)
     for n in range(1, min(MAX_LINES, len(words)) + 1):
+        if n * size * LEADING > H - 2 * PAD:
+            return None
         best = None
         for cuts in combinations(range(1, len(words)), n - 1):
             idx = (0, *cuts, len(words))
-            lines = [" ".join(words[idx[i]:idx[i + 1]]) for i in range(n)]
+            lines = [join(words[idx[i]:idx[i + 1]]) for i in range(n)]
             widest = max(face.width(l, size) for l in lines)
-            if widest <= MAX_W and (best is None or widest < best[0]):
-                best = (widest, lines)
+            hyphen_breaks = sum(words[c - 1].endswith("-") for c in cuts)
+            key = (hyphen_breaks, widest)
+            if widest <= MAX_W and (best is None or key < best[0]):
+                best = (key, lines)
         if best:
             return best[1]
     return None

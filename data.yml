@@ -194,10 +194,10 @@ categories:
                 confidence: medium
       - name: "Cybersecurity"
         items:
-          - name: "Chimera Cybersecurity"
+          - name: "Chimera Security"
             description: "Plug-and-play network security appliance for SMBs combining detection and response, firewall and vulnerability scanning with edge AI."
             homepage_url: https://www.chimerasec.com
-            logo: chimera-cybersecurity.svg
+            logo: chimera-security.svg
             extra:
               annotations:
                 presence: team
