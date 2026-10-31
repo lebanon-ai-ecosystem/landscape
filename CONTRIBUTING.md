@@ -28,6 +28,8 @@ Both need a free GitHub account. Every change lands as a reviewed commit.
 
 **Out of scope:** agencies and consultancies selling AI services without a product, resellers of foreign AI tools, companies in stealth, and organizations with no visible activity in 12 months.
 
+**Activity for open-source models.** Published models are rarely modified; improvements ship as new versions. For an open-source model, current use, shown by downloads in the last 12 months, counts as activity even without new commits or releases.
+
 ## Listing rules
 
 An entry goes on the landscape only when all three hold:
