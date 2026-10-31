@@ -176,8 +176,8 @@ button{{font:inherit;font-weight:600;padding:12px 22px;border:2px solid #007A48;
     <button type="submit" id="send">Send</button>
     <button type="button" id="issue">Have a GitHub account? Open it as a public issue</button>
   </div>
-  <div id="status" role="status" aria-live="polite"></div>
 </div>
+<div id="status" role="status" aria-live="polite"></div>
 </form>
 
 <p class="privacy">Send forwards your message by email through Web3Forms, a third-party service. Your name and email are used only to reply and, if you ask, to credit you. They are never published. A maintainer records your suggestion as a public issue in the <a href="https://github.com/lebanon-ai-ecosystem/landscape">project repository</a> without your details, so every change stays on the public record. The public-issue route opens GitHub, where your GitHub account is shown.</p>
