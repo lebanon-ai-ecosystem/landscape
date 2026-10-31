@@ -40,6 +40,8 @@ Names must match exactly across files, including capitalization and punctuation.
 | Change the favicon or link-preview image | Commit the new file in `assets/` first; then point `images` in `settings.yml` at that commit (the comment there explains why) |
 | Move to a custom domain | `settings.yml` (set `url`, delete `base_path`); then Settings, Pages, Custom domain |
 | Change the Feedback page or its settings | `scripts/make-feedback-page.py`; `feedback.yml` |
+| Change the introduction above the map, tile styling, the item facts line, or the guide's empty-section notes | `scripts/polish-site.py` |
+| Show or hide menu items (STATS is hidden, FEEDBACK added) | `scripts/add-feedback-menu.py` |
 | Change the 16:9 slide layout (which category goes in which column) | `scripts/make-slide.py` (`COLUMNS`) |
 | Upgrade landscape2 | `.github/workflows/build.yml` (`LANDSCAPE2_VERSION`) |
 
@@ -57,7 +59,7 @@ Names must match exactly across files, including capitalization and punctuation.
 
 **Guide headings** inside a content block use levels 4 to 6 (`####`); levels 1 to 3 are reserved for the category structure.
 
-**Upgrading landscape2** may break the category color step, which patches the generated code. The build then fails with "landscape2 output changed" instead of publishing a half-colored site. Build the new version locally first, and update `scripts/apply-category-colors.py` if needed.
+**Upgrading landscape2** may break the category color step, which patches the generated code. The build then fails with "landscape2 output changed" instead of publishing a half-colored site. Build the new version locally first, and update `scripts/apply-category-colors.py` if needed. `scripts/polish-site.py` and `scripts/add-feedback-menu.py` depend on landscape2 class names in the same way and fail the build the same way.
 
 ## Before merging a pull request
 

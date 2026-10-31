@@ -280,7 +280,7 @@ categories:
                 verified_on: "2026-10-30"
                 confidence: high
           - name: "Flat6Labs Beirut"
-            description: "Seed program and early-stage fund for Lebanese startups, run by Flat6Labs; eFlow is an alumnus."
+            description: "Seed program and early-stage fund for Lebanese startups, run by Flat6Labs."
             homepage_url: https://www.flat6labs.com
             logo: flat6labs-beirut.svg
             extra:

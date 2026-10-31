@@ -28,6 +28,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
+        with:
+          # Full history, so the site can show the date data.yml last changed.
+          fetch-depth: 0
 
       - name: Install landscape2
         run: |
@@ -80,11 +83,17 @@ jobs:
 
       - name: Feedback page and menu item
         # feedback/index.html from data.yml and feedback.yml, then FEEDBACK
-        # in the top menu. See scripts/make-feedback-page.py and
+        # in the top menu in place of STATS. See scripts/make-feedback-page.py and
         # scripts/add-feedback-menu.py.
         run: |
           python3 scripts/make-feedback-page.py data.yml feedback.yml settings.yml build
           python3 scripts/add-feedback-menu.py build settings.yml
+
+      - name: Design fixes
+        # Introduction above the map, tile styling, item facts line, guide
+        # width and empty-section notes, accessibility fixes. See
+        # scripts/polish-site.py.
+        run: python3 scripts/polish-site.py build data.yml guide.yml settings.yml
 
       - name: SPA fallback
         # Single-page app: unknown paths must serve the app.
