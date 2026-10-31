@@ -6,4 +6,4 @@
 # goatcounter_code: the site code chosen when creating the GoatCounter account
 # (the "code" in https://<code>.goatcounter.com). While it is empty, no counter
 # is added to the site.
-goatcounter_code: ""
+goatcounter_code: "ailandscape"

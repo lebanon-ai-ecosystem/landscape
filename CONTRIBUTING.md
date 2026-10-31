@@ -64,7 +64,7 @@ Place the entry in the one subcategory that best describes what the product does
 
 **Second placement.** An entry may appear in one more subcategory, through `second_path`, only when it does both things as a core activity: an accelerator that also runs a fund, for example. A Lebanese-founded-abroad entry is never placed in a Lebanon section. (Rule set 2026-10-31.)
 
-**LinkedIn and X.** Only the two accounts the organization itself links from its own website. Never a person's profile and never a parent organization's account. If the website links neither, leave both out; the entry is still listed. These are the only social links the landscape carries, to keep verification simple. (Rule set 2026-10-31.)
+**LinkedIn and X.** Only the organization's own two accounts, as linked from its website or confirmed by a maintainer. Never a person's profile and never a parent organization's account. If neither source gives one, leave it out; the entry is still listed. These are the only social links the landscape carries, to keep verification simple. (Rule set 2026-10-31.)
 
 ## Names, not logos
 

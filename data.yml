@@ -3,10 +3,10 @@
 # One entry per organization, in its primary subcategory. Use `second_path`
 # to show an entry in a second subcategory without duplicating it.
 #
-# `twitter` (the X account) and `extra.linkedin_url`: only accounts the
-# organization itself links from its own website. Never a person's profile and
-# never a parent organization's account. Leave them out when the site links
-# none. They show as icons on the entry's detail view.
+# `twitter` (the X account) and `extra.linkedin_url`: only the organization's
+# own accounts, as linked from its website or confirmed by a maintainer. Never
+# a person's profile and never a parent organization's account. Leave them out
+# when neither source gives one. They show as icons on the entry's detail view.
 #
 # `second_path` (at most one): only when the entry does both things as a core
 # activity, for example an accelerator that also runs a fund. Never use it to
@@ -159,6 +159,7 @@ categories:
             logo: lebanese-american-university.svg
             twitter: https://x.com/lebamericanuni
             extra:
+              linkedin_url: https://www.linkedin.com/school/lebanese-american-university
               annotations:
                 presence: hq
                 city: "Beirut"
@@ -172,7 +173,7 @@ categories:
             logo: lebanese-university.svg
             twitter: https://x.com/LebaneseUni
             extra:
-              linkedin_url: https://www.linkedin.com/company/lebanese-university-official-page
+              linkedin_url: https://www.linkedin.com/school/lebanese.university
               annotations:
                 presence: hq
                 city: "Hadath"
@@ -202,6 +203,7 @@ categories:
             logo: aub-mind-lab.svg
             repo_url: https://github.com/aub-mind/arabert
             extra:
+              linkedin_url: https://www.linkedin.com/company/aub-mind-lab
               annotations:
                 presence: hq
                 city: "Beirut"
@@ -450,6 +452,7 @@ categories:
             homepage_url: https://klangoo.com
             logo: klangoo.svg
             extra:
+              linkedin_url: https://www.linkedin.com/company/us-klangoo
               annotations:
                 presence: diaspora
                 city: "Hoboken"
