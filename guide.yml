@@ -41,8 +41,12 @@ categories:
 
           Each organization appears as its name, in the same font and size as
           every other. The map carries no logos, so no entry stands out
-          because of its branding. Select a name for its description and
-          website.
+          because of its branding. Select a name for its description,
+          website, and LinkedIn and X accounts where the organization has them.
+
+          An organization that does two things as a core activity, such as an
+          accelerator that also runs a fund, appears in both boxes. It is still
+          counted once.
 
           A box appears on the map only once it has at least one entry. This
           guide describes every box, including those still empty.
@@ -147,6 +151,10 @@ categories:
           [Conduct concern](https://github.com/lebanon-ai-ecosystem/landscape/issues/new?template=conduct.yml)
           issue without any details; a maintainer contacts you privately
           within 3 days.
+
+          The site counts visits with GoatCounter, which sets no cookies and
+          stores no personal data. Feedback sent by email goes through
+          Web3Forms; the Feedback page explains how it is handled.
 
       - subcategory: "Downloads and reuse"
         content: |

@@ -1,0 +1,9 @@
+# Visit counter for the site (scripts/add-counter.py). Decided 2026-10-31:
+# cookie-free counting with GoatCounter (goatcounter.com), which sets no
+# cookies, stores no personal data and needs no consent banner. Free for
+# reasonable public use; donation-supported.
+#
+# goatcounter_code: the site code chosen when creating the GoatCounter account
+# (the "code" in https://<code>.goatcounter.com). While it is empty, no counter
+# is added to the site.
+goatcounter_code: "ailandscape"

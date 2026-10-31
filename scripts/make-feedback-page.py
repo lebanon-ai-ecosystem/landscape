@@ -20,6 +20,7 @@ jump between pages. A search typed here is handed to the Explore page.
 Usage: python3 scripts/make-feedback-page.py <data.yml> <feedback.yml> <settings.yml> <build dir>
 """
 import json
+import re
 import sys
 from html import escape
 from pathlib import Path
@@ -35,6 +36,13 @@ def options_from_issue_form(field_id):
         if field.get("id") == field_id:
             return field["attributes"]["options"]
     sys.exit(f"make-feedback-page: field '{field_id}' not found in {ISSUE_FORM.name}")
+
+
+def md_links(text):
+    """Escape text and turn [label](https://...) into links: enough for the
+    one-paragraph banner and footer text in settings.yml."""
+    out = escape(" ".join((text or "").split()))
+    return re.sub(r"\[([^\]]+)\]\((https?://[^)\s]+)\)", r'<a href="\2">\1</a>', out)
 
 
 def main(data_file, config_file, settings_file, build_dir):
@@ -77,6 +85,11 @@ def main(data_file, config_file, settings_file, build_dir):
         type_options=type_options, rel_options=rel_options,
         cfg=json.dumps(cfg, ensure_ascii=False).replace("</", "<\\/"),
         repo=escape(config["repository"]),
+        motd=(f'<div class="motd" id="motd"><div class="msg">{md_links(settings["header"]["motd"])}</div>'
+              '<button type="button" aria-label="Dismiss message" id="motdx">&times;</button></div>'
+              if (settings.get("header") or {}).get("motd") else ""),
+        footer_text=(f'<div class="legend">{md_links(settings["footer"]["text"])}</div>'
+                     if (settings.get("footer") or {}).get("text") else ""),
     )
     out = Path(build_dir) / "feedback"
     out.mkdir(parents=True, exist_ok=True)
@@ -127,6 +140,12 @@ footer .top a{{color:#fff;font-size:28px;line-height:0}}
 footer hr{{border:0;border-top:1px solid #fff;opacity:.25;margin:32px 0}}
 footer .legend{{font-size:11.2px;color:#ced4da;padding-top:8px}}
 footer .legend a{{color:#fff;font-weight:600}}
+footer .legend + .legend{{margin-top:0}}
+.motd{{position:relative;display:flex;align-items:center;min-height:44px;padding:8px 24px;background:#f8f9fa;border-bottom:1px solid #dee2e6;font-size:12.8px;line-height:1.5;color:#212529}}
+.motd .msg{{flex-grow:1;text-align:center}}
+.motd a{{color:#212529}}
+.motd button{{background:none;border:0;padding:0 2px;font-size:24px;line-height:1;color:#212529;opacity:.5;cursor:pointer}}
+.motd button:hover{{opacity:.75}}
 main{{max-width:760px;margin:0 auto;padding:36px 24px 64px}}
 h1{{color:#007A48;font-weight:500;font-size:40px;margin:0 0 12px}}
 .lede{{font-size:17px;line-height:1.55;margin:0 0 28px}}
@@ -150,6 +169,7 @@ button{{font:inherit;font-weight:600;padding:12px 22px;border:2px solid #007A48;
 @media (max-width:991px){{.sitehdr{{height:auto}} .sitehdr .in{{flex-wrap:wrap;gap:12px;padding:8px 16px}} .sitehdr nav{{order:2;width:100%;margin-left:0;gap:20px}} .search{{order:3;width:100%;margin:4px 0}} .icons{{order:1;margin-left:auto}} footer{{padding:32px 24px}}}}
 </style></head>
 <body>
+{motd}
 <header class="sitehdr"><div class="in">
   <a class="logo" href="{base}"><img src="{base}images/header-logo.svg" alt="Lebanon AI Ecosystem" height="34"></a>
   <nav aria-label="Main"><a href="{base}">Explore</a><a href="{base}guide">Guide</a><a class="on" href="{base}feedback/" aria-current="page">Feedback</a></nav>
@@ -193,6 +213,8 @@ button{{font:inherit;font-weight:600;padding:12px 22px;border:2px solid #007A48;
   <fieldset><label class="q" for="n_type">Type</label><select id="n_type" data-req><option value="">Choose one</option>{type_options}</select></fieldset>
   <fieldset><label class="q" for="n_sub">Where it belongs on the map <span class="optional">(optional)</span></label><select id="n_sub"><option value="">Not sure</option>{sub_options}</select></fieldset>
   <fieldset><label class="q" for="n_desc">What its AI does, in one sentence</label><p class="hint">200 characters maximum.</p><textarea id="n_desc" maxlength="200" data-req></textarea></fieldset>
+  <fieldset><label class="q" for="n_li">LinkedIn page <span class="optional">(optional)</span></label><p class="hint">Only the organization's own page, as linked from its website.</p><input type="url" id="n_li" placeholder="https://www.linkedin.com/company/"></fieldset>
+  <fieldset><label class="q" for="n_x">X account <span class="optional">(optional)</span></label><p class="hint">Only the organization's own account, as linked from its website.</p><input type="url" id="n_x" placeholder="https://x.com/"></fieldset>
   <fieldset><label class="q" for="n_ev">Evidence</label><p class="hint">Links that show it meets the criteria: the live product, the team in Lebanon or the Lebanese founder, publications, or the portfolio page.</p><textarea id="n_ev" data-req></textarea></fieldset>
   <fieldset><label class="check"><input type="checkbox" id="n_ai" data-req> <span>The product is AI software, not software, a service or a device that uses AI.</span></label></fieldset>
 </div>
@@ -238,12 +260,15 @@ button{{font:inherit;font-weight:600;padding:12px 22px;border:2px solid #007A48;
     <a href="https://github.com/{repo}" target="_blank" rel="noopener noreferrer" aria-label="Project repository on GitHub"><svg viewBox="0 0 496 512" width="1em" height="1em" fill="currentColor"><use href="#gh"/></svg></a>
   </div>
   <hr>
+  {footer_text}
   <div class="legend">Powered by <a href="https://github.com/cncf/landscape2" target="_blank" rel="noopener noreferrer">CNCF interactive landscapes generator</a>.</div>
 </footer>
 
 <script>
 // Header: search hands the query to the Explore page; "/" focuses it; download menu.
 (function () {{
+  var motdx = document.getElementById("motdx");
+  if (motdx) motdx.addEventListener("click", function () {{ document.getElementById("motd").remove(); }});
   var q = document.getElementById("q");
   document.getElementById("search").addEventListener("submit", function (e) {{
     e.preventDefault();
@@ -289,7 +314,7 @@ function valid() {{
   for (const el of visibleRequired()) {{
     const empty = el.type === "checkbox" ? !el.checked : !el.value.trim();
     if (empty) {{ el.focus(); status.textContent = "Please complete the highlighted field."; return false; }}
-    if (el.type === "url" && !/^https?:\\/\\/\\S+$/.test(el.value.trim())) {{ el.focus(); status.textContent = "Please enter a full link starting with https://"; return false; }}
+    if (el.type === "url" && el.value.trim() && !/^https?:\\/\\/\\S+$/.test(el.value.trim())) {{ el.focus(); status.textContent = "Please enter a full link starting with https://"; return false; }}
   }}
   return true;
 }}
@@ -298,7 +323,8 @@ function answers() {{
   const v = id => $(id).value.trim();
   if (kind === "new") return {{
     request: CFG.requests[0], name: v("n_name"), homepage: v("n_url"), type: v("n_type"),
-    subcategory: v("n_sub"), description: v("n_desc"), evidence: v("n_ev"), relationship: v("rel") }};
+    subcategory: v("n_sub"), description: v("n_desc"), linkedin: v("n_li"), x: v("n_x"),
+    evidence: v("n_ev"), relationship: v("rel") }};
   if (kind === "correction") return {{
     request: CFG.requests[1], name: v("c_entry"), homepage: CFG.homepages[v("c_entry")] || "",
     description: v("c_what"), evidence: v("c_src"), relationship: v("rel") }};
@@ -315,7 +341,7 @@ function issueUrl(a) {{
     return base + "?" + q.toString();
   }}
   const q = new URLSearchParams({{ template: "add-entry.yml", title: "[Entry] " + a.name }});
-  for (const k of ["request", "name", "homepage", "type", "subcategory", "description", "evidence", "relationship"])
+  for (const k of ["request", "name", "homepage", "type", "subcategory", "description", "linkedin", "x", "evidence", "relationship"])
     if (a[k]) q.set(k, a[k]);
   return base + "?" + q.toString();
 }}

@@ -38,10 +38,13 @@ Names must match exactly across files, including capitalization and punctuation.
 | Edit the Guide page | `guide.yml` |
 | Change the project name or header logo | `settings.yml` (`foundation`, `description`); `assets/header-logo.svg` and `assets/footer-logo.svg`; `guide.yml` introduction; README.md |
 | Change the favicon or link-preview image | Commit the new file in `assets/` first; then point `images` in `settings.yml` at that commit (the comment there explains why) |
-| Move to a custom domain | `settings.yml` (set `url`, delete `base_path`); then Settings, Pages, Custom domain |
+| Move to a custom domain | `settings.yml` (set `url`, delete `base_path`, and update the absolute links in `header.motd` and `footer.text`); then Settings, Pages, Custom domain |
 | Change the Feedback page or its settings | `scripts/make-feedback-page.py`; `feedback.yml` |
 | Change the introduction above the map, tile styling, the item facts line, or the guide's empty-section notes | `scripts/polish-site.py` |
 | Show or hide menu items (STATS is hidden, FEEDBACK added) | `scripts/add-feedback-menu.py` |
+| Change or remove the banner above the header | `settings.yml` (`header.motd`); the Feedback page mirrors it |
+| Change the footer text | `settings.yml` (`footer.text`); the Feedback page mirrors it |
+| Turn the visit counter on or off | `counter.yml` (`goatcounter_code`; empty means off) |
 | Change the 16:9 slide layout (which category goes in which column) | `scripts/make-slide.py` (`COLUMNS`) |
 | Upgrade landscape2 | `.github/workflows/build.yml` (`LANDSCAPE2_VERSION`) |
 

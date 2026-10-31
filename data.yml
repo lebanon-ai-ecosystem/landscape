@@ -3,8 +3,18 @@
 # One entry per organization, in its primary subcategory. Use `second_path`
 # to show an entry in a second subcategory without duplicating it.
 #
-# Every entry carries `extra.annotations` with the fields below. Annotations
-# are not shown on the site; they keep the data we need for curation and stats.
+# `twitter` (the X account) and `extra.linkedin_url`: only the organization's
+# own accounts, as linked from its website or confirmed by a maintainer. Never
+# a person's profile and never a parent organization's account. Leave them out
+# when neither source gives one. They show as icons on the entry's detail view.
+#
+# `second_path` (at most one): only when the entry does both things as a core
+# activity, for example an accelerator that also runs a fund. Never use it to
+# place a Lebanese-founded-abroad entry in a Lebanon section.
+#
+# Every entry carries `extra.annotations` with the fields below. city, founded
+# and verified_on are shown on the entry's detail view (scripts/polish-site.py);
+# the rest are kept for curation and stats.
 #
 #   presence:     hq | team | diaspora | abroad | unconfirmed
 #                 (abroad: a community or group based outside Lebanon)
@@ -89,6 +99,7 @@ categories:
             homepage_url: https://zaker.io
             logo: zaker.svg
             extra:
+              linkedin_url: https://www.linkedin.com/company/zakerio
               annotations:
                 presence: hq
                 city: "Beirut"
@@ -108,7 +119,9 @@ categories:
             description: "AI operating system for legal work, combining drafting, review and legal reasoning with practice management."
             homepage_url: https://haqq.ai
             logo: haqq-legal-ai.svg
+            twitter: https://x.com/haqq_ai
             extra:
+              linkedin_url: https://www.linkedin.com/company/haqq-ai
               annotations:
                 presence: hq
                 city: ""
@@ -130,7 +143,9 @@ categories:
             description: "University with a School of Computing and Data Sciences and several AI research groups."
             homepage_url: https://www.aub.edu.lb
             logo: american-university-of-beirut.svg
+            twitter: https://x.com/AUB_Lebanon
             extra:
+              linkedin_url: https://www.linkedin.com/company/american-university-of-beirut
               annotations:
                 presence: hq
                 city: "Beirut"
@@ -142,7 +157,9 @@ categories:
             description: "University with an Artificial Intelligence and Cyber Systems research center and an MS in Applied AI."
             homepage_url: https://www.lau.edu.lb
             logo: lebanese-american-university.svg
+            twitter: https://x.com/lebamericanuni
             extra:
+              linkedin_url: https://www.linkedin.com/school/lebanese-american-university
               annotations:
                 presence: hq
                 city: "Beirut"
@@ -154,7 +171,9 @@ categories:
             description: "Lebanon's public university; partner in an AI and robotics curriculum project and in the national Oracle AI training program."
             homepage_url: https://www.ul.edu.lb
             logo: lebanese-university.svg
+            twitter: https://x.com/LebaneseUni
             extra:
+              linkedin_url: https://www.linkedin.com/school/lebanese.university
               annotations:
                 presence: hq
                 city: "Hadath"
@@ -166,7 +185,9 @@ categories:
             description: "University running the Center for Digital Innovation and Artificial Intelligence (CINIA)."
             homepage_url: https://www.usj.edu.lb
             logo: universite-saint-joseph-de-beyrouth.svg
+            twitter: https://x.com/USJLiban
             extra:
+              linkedin_url: https://www.linkedin.com/school/usjliban
               annotations:
                 presence: hq
                 city: "Beirut"
@@ -182,6 +203,7 @@ categories:
             logo: aub-mind-lab.svg
             repo_url: https://github.com/aub-mind/arabert
             extra:
+              linkedin_url: https://www.linkedin.com/company/aub-mind-lab
               annotations:
                 presence: hq
                 city: "Beirut"
@@ -217,7 +239,9 @@ categories:
             description: "Center for Digital Innovation and Artificial Intelligence at Université Saint-Joseph de Beyrouth."
             homepage_url: https://cinia.blogs.usj.edu.lb/
             logo: usj-cinia.svg
+            twitter: https://x.com/CINIAUSJ
             extra:
+              linkedin_url: https://www.linkedin.com/company/center-for-digital-innovation-and-artificial-intelligence
               annotations:
                 presence: hq
                 city: "Beirut"
@@ -234,6 +258,7 @@ categories:
             homepage_url: https://www.razorcap.co
             logo: razor-capital.svg
             extra:
+              linkedin_url: https://www.linkedin.com/company/razor-capital
               annotations:
                 presence: abroad
                 city: "London"
@@ -245,7 +270,11 @@ categories:
             description: "Tech-for-equity investor and accelerator for early-stage startups; led HAQQ Legal AI's seed round."
             homepage_url: https://sowlutions.com
             logo: sowlutions-ventures.svg
+            twitter: https://x.com/sowlutionscom
+            second_path:
+              - "Ecosystem enablers / Accelerators and incubators"
             extra:
+              linkedin_url: https://www.linkedin.com/company/sowlutions
               annotations:
                 presence: hq
                 city: "Naher El Kalb"
@@ -259,7 +288,9 @@ categories:
             description: "Technology district hosting startups and community events, including the Lebanon AI Festival."
             homepage_url: https://beirutdigitaldistrict.com
             logo: beirut-digital-district.svg
+            twitter: https://x.com/BeirutDigitalD
             extra:
+              linkedin_url: https://www.linkedin.com/company/beirut-digital-district
               annotations:
                 presence: hq
                 city: "Beirut"
@@ -271,7 +302,11 @@ categories:
             description: "Innovation parks, accelerators and funds supporting Lebanese startups, including AI ventures."
             homepage_url: https://berytech.org
             logo: berytech.svg
+            twitter: https://x.com/berytech
+            second_path:
+              - "Ecosystem enablers / Investors"
             extra:
+              linkedin_url: https://www.linkedin.com/company/berytech
               annotations:
                 presence: hq
                 city: "Beirut"
@@ -283,7 +318,11 @@ categories:
             description: "Seed program and early-stage fund for Lebanese startups, run by Flat6Labs."
             homepage_url: https://www.flat6labs.com
             logo: flat6labs-beirut.svg
+            twitter: https://x.com/flat6labs
+            second_path:
+              - "Ecosystem enablers / Investors"
             extra:
+              linkedin_url: https://www.linkedin.com/company/flat6labs
               annotations:
                 presence: hq
                 city: "Beirut"
@@ -295,6 +334,7 @@ categories:
             description: "AUB's startup incubator and accelerator, based at Beirut Digital District."
             homepage_url: https://sites.aub.edu.lb/ipark/
             logo: zein-aub-ipark.svg
+            twitter: https://x.com/aubipark
             extra:
               annotations:
                 presence: hq
@@ -309,7 +349,9 @@ categories:
             description: "Google Developer Group chapter in Lebanon; runs Build with AI events, DevFest Beirut and community meetups."
             homepage_url: https://gdg.community.dev/gdg-coast-lebanon/
             logo: gdg-coast-lebanon.svg
+            twitter: https://x.com/GDGLebanon
             extra:
+              linkedin_url: https://www.linkedin.com/company/gdg-coast-lebanon
               annotations:
                 presence: hq
                 city: "Beirut"
@@ -333,7 +375,9 @@ categories:
             description: "Lebanese diaspora technology network in North America, with AI-focused webinars and founder programs."
             homepage_url: https://lebnet.us
             logo: lebnet.svg
+            twitter: https://x.com/LebNetOrg
             extra:
+              linkedin_url: https://www.linkedin.com/company/lebnet
               annotations:
                 presence: diaspora
                 city: ""
@@ -345,7 +389,9 @@ categories:
             description: "AI education platform and community builder; started the Beirut AI community and co-organized the Lebanon AI Festival."
             homepage_url: https://zaka.ai
             logo: zaka.svg
+            twitter: https://x.com/zaka4ai
             extra:
+              linkedin_url: https://www.linkedin.com/school/zaka-ai
               annotations:
                 presence: hq
                 city: "Beirut"
@@ -359,7 +405,9 @@ categories:
             description: "Lebanon's ministry for technology and artificial intelligence, leading the national AI strategy."
             homepage_url: https://mitai.gov.lb
             logo: ministry-of-state-for-technology-and-ai.svg
+            twitter: https://x.com/mitailebanon
             extra:
+              linkedin_url: https://www.linkedin.com/company/mitai-lebanon
               annotations:
                 presence: hq
                 city: "Beirut"
@@ -371,7 +419,9 @@ categories:
             description: "Office of the Minister of State for Administrative Reform; administers the World Bank-backed digital transformation programme covering AI and cybersecurity."
             homepage_url: https://omsar.gov.lb
             logo: omsar.svg
+            twitter: https://x.com/OmsarGov
             extra:
+              linkedin_url: https://www.linkedin.com/company/omsar-lebanon
               annotations:
                 presence: hq
                 city: "Beirut"
@@ -387,7 +437,9 @@ categories:
             description: "Industrial AI for energy and industrial operations, built on neuro-symbolic methods. Formerly Beyond Limits; headquartered in Glendale, California."
             homepage_url: https://beyond.ai
             logo: beyondai.svg
+            twitter: https://x.com/BeyondAIGlobal
             extra:
+              linkedin_url: https://www.linkedin.com/company/beyond-ai
               annotations:
                 presence: diaspora
                 city: "Glendale"
@@ -400,6 +452,7 @@ categories:
             homepage_url: https://klangoo.com
             logo: klangoo.svg
             extra:
+              linkedin_url: https://www.linkedin.com/company/us-klangoo
               annotations:
                 presence: diaspora
                 city: "Hoboken"
@@ -411,7 +464,9 @@ categories:
             description: "Enterprise generative AI platform with its own Palmyra models. Co-founder and CEO May Habib was born in Lebanon."
             homepage_url: https://writer.com
             logo: writer.svg
+            twitter: https://x.com/get_writer
             extra:
+              linkedin_url: https://www.linkedin.com/company/getwriter
               annotations:
                 presence: diaspora
                 city: "San Francisco"
