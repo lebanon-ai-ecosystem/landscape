@@ -119,7 +119,7 @@ def build_html(data_file, logos_dir, colors_file):
     css = CSS.replace("FONT64", base64.b64encode(FONT.read_bytes()).decode())
     return f"""<!DOCTYPE html><html><head><meta charset="utf-8"><style>{css}</style></head><body>
 <header><div><h1>Lebanon AI Ecosystem</h1>
-<div class="lede">{total} organizations building, researching and backing AI in Lebanon and across its diaspora</div></div>
+<div class="lede">{total} organizations and open-source projects building, researching and backing AI in Lebanon and across its diaspora</div></div>
 <div class="url">{URL}</div></header>
 <main>{"".join(cols)}</main>
 <footer><span>Every organization appears as its name; listing is free and follows published rules.</span>

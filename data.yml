@@ -42,15 +42,27 @@ categories:
         items: []
       - name: "Arabic NLP and speech"
         items:
-          - name: "Aralects"
-            description: "AI-powered app for learning spoken Arabic dialects, with Arabic NLP and annotation work. Registered in the UAE; engineering team in Beirut."
-            homepage_url: https://aralects.com
-            logo: aralects.svg
+          - name: "AraBERT"
+            description: "Open-source Arabic language models (AraBERT, AraGPT2, AraELECTRA) created at AUB by Wissam Antoun, Fady Baly and Hazem Hajj."
+            homepage_url: https://github.com/aub-mind/arabert
+            logo: arabert.svg
             extra:
               annotations:
-                presence: team
+                presence: hq
                 city: "Beirut"
-                founded: ""
+                founded: "2020"
+                verified_by: public-sources
+                verified_on: "2026-10-30"
+                confidence: medium
+          - name: "Lebanese-Llama-3.1-8B"
+            description: "Open-source Llama 3.1 fine-tune for Lebanese Arabic, including Arabizi and French and English code-switching. Created by Anthony Assi."
+            homepage_url: https://huggingface.co/assix-research/lebanese-llama-3.1-8b
+            logo: lebanese-llama-3-1-8b.svg
+            extra:
+              annotations:
+                presence: unconfirmed
+                city: ""
+                founded: "2026"
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: medium
@@ -89,19 +101,7 @@ categories:
       - name: "Media, marketing and adtech"
         items: []
       - name: "Energy, climate and agriculture"
-        items:
-          - name: "NuWatt"
-            description: "Hardware-free AI solar monitoring and energy management for homeowners and installers."
-            homepage_url: https://nuwatt.co
-            logo: nuwatt.svg
-            extra:
-              annotations:
-                presence: hq
-                city: "Zahle"
-                founded: "2025"
-                verified_by: public-sources
-                verified_on: "2026-10-30"
-                confidence: high
+        items: []
       - name: "Legal and compliance"
         items:
           - name: "HAQQ Legal AI"
@@ -119,19 +119,7 @@ categories:
       - name: "Logistics and mobility"
         items: []
       - name: "HR and future of work"
-        items:
-          - name: "JOBSEEQR"
-            description: "AI talent matching and applicant tracking for hiring Lebanese talent, with personalized learning paths for candidates."
-            homepage_url: https://jobseeqr.co
-            logo: jobseeqr.svg
-            extra:
-              annotations:
-                presence: hq
-                city: ""
-                founded: ""
-                verified_by: public-sources
-                verified_on: "2026-10-30"
-                confidence: medium
+        items: []
       - name: "Cybersecurity"
         items: []
   - name: "Research and academia"
@@ -407,18 +395,6 @@ categories:
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: medium
-          - name: "Bounty"
-            description: "Marketplace where clients post tasks and AI agents bid to complete them, with payment after the result is checked."
-            homepage_url: https://trybounty.ai
-            logo: bounty.svg
-            extra:
-              annotations:
-                presence: diaspora
-                city: "New York"
-                founded: ""
-                verified_by: public-sources
-                verified_on: "2026-10-30"
-                confidence: medium
           - name: "Klangoo"
             description: "NLP API and Magnet, an audience-engagement tool for online publishers. Headquartered in Hoboken, New Jersey."
             homepage_url: https://klangoo.com
@@ -445,18 +421,6 @@ categories:
                 confidence: high
       - name: "Diaspora: applied AI"
         items:
-          - name: "Kanz"
-            description: "AI-powered recruitment platform that screens and assesses candidates and gives each one feedback. Founded by Roy Baladi; based in Riyadh."
-            homepage_url: https://ka.nz
-            logo: kanz.svg
-            extra:
-              annotations:
-                presence: diaspora
-                city: "Riyadh"
-                founded: ""
-                verified_by: public-sources
-                verified_on: "2026-10-30"
-                confidence: medium
           - name: "Revilico"
             description: "Revilico OS combines simulation, AI models and wet-lab experiments to speed up small-molecule drug discovery."
             homepage_url: https://revilico.bio
@@ -466,18 +430,6 @@ categories:
                 presence: diaspora
                 city: ""
                 founded: ""
-                verified_by: public-sources
-                verified_on: "2026-10-30"
-                confidence: medium
-          - name: "Sensio Air"
-            description: "Indoor air sensor that uses neural networks to identify allergens, pollutants and pathogens. Founded by Cyrille Najjar and Dr. Eve Tamraz."
-            homepage_url: https://www.sensioair.com
-            logo: sensio-air.svg
-            extra:
-              annotations:
-                presence: diaspora
-                city: "Sunnyvale"
-                founded: "2016"
                 verified_by: public-sources
                 verified_on: "2026-10-30"
                 confidence: medium
