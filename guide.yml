@@ -83,7 +83,10 @@ categories:
           Consultancies, agencies, and software houses that build AI for
           clients without a product of their own; resellers of foreign AI
           tools; companies in stealth; and organizations with no visible
-          activity in the last 12 months.
+          activity in the last 12 months. For open-source models, current
+          use, shown by downloads in the last 12 months, counts as activity:
+          published models are rarely modified, and improvements ship as new
+          versions.
 
           The full criteria, with the evidence required for each type, are in
           [CONTRIBUTING.md](https://github.com/lebanon-ai-ecosystem/landscape/blob/main/CONTRIBUTING.md).
