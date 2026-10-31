@@ -51,8 +51,8 @@ categories:
         content: |
           #### Companies
 
-          A company qualifies when AI is the product, not one feature of a
-          product, and customers can use it today. It must be headquartered in
+          A company qualifies when its product is AI software, not software
+          that uses AI, and customers can use it today. It must be headquartered in
           Lebanon or run a working team there of at least three full-time
           people. Acquired companies qualify on the same terms while the
           product stays live.
@@ -98,9 +98,11 @@ categories:
              needs checking; maintainers follow up with the organization.
           2. **A working website is confirmed.** A maintainer opens the
              homepage before any entry is added.
-          3. **AI is the product, not one feature of a product.** A product
-             that adds an AI feature to something else, such as a platform,
-             an app, or a device, does not qualify, however good the feature.
+          3. **The product is AI software.** Models, AI platforms, and AI
+             applications whose core is the AI itself qualify. Software,
+             services, and devices that use or integrate AI do not, however
+             good the AI, and neither do marketplaces where third-party AI
+             does the work.
 
           Listing does not require the organization's consent, and it is not
           an endorsement. It records that an organization meets the published
