@@ -95,6 +95,11 @@ jobs:
         # scripts/polish-site.py.
         run: python3 scripts/polish-site.py build data.yml guide.yml settings.yml
 
+      - name: Visit counter
+        # Cookie-free GoatCounter snippet; does nothing while counter.yml has
+        # no site code. See scripts/add-counter.py.
+        run: python3 scripts/add-counter.py build counter.yml
+
       - name: SPA fallback
         # Single-page app: unknown paths must serve the app.
         run: cp build/index.html build/404.html

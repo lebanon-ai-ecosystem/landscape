@@ -76,6 +76,8 @@ def main():
     wanted = " ".join(f.get("Proposed subcategory", "").split())
     city = " ".join(f.get("City", "").split())
     founded = f.get("Year founded", "").strip()
+    linkedin = f.get("LinkedIn page", "").strip()
+    xurl = f.get("X account", "").strip()
 
     if not name:
         fail("The issue has no organization name.")
@@ -87,6 +89,13 @@ def main():
         fail(f"The description is {len(desc)} characters; the limit is {MAX_DESC}. Edit the issue, then re-apply `approved`.")
     if founded and not re.match(r"^(19|20)\d\d$", founded):
         fail(f"Year founded should be a four-digit year, not `{founded[:20]}`.")
+    if linkedin and not re.match(r"^https://(www\.)?linkedin\.com/(company|school|showcase)/[A-Za-z0-9._%-]+/?$", linkedin):
+        fail(f"The LinkedIn link must be an organization page (linkedin.com/company/...), not `{linkedin[:100]}`.")
+    m = re.match(r"^https://(www\.)?(x|twitter)\.com/([A-Za-z0-9_]{1,15})/?$", xurl) if xurl else None
+    if xurl and not m:
+        fail(f"The X link must look like https://x.com/name, not `{xurl[:100]}`.")
+    xurl = f"https://x.com/{m.group(3)}" if m else ""
+    linkedin = linkedin.rstrip("/")
 
     data = yaml.safe_load(data_file.read_text())
     subs, names, logos = {}, set(), set()
@@ -113,7 +122,9 @@ def main():
         f"            description: {q(desc)}",
         f"            homepage_url: {url}",
         f"            logo: {logo}",
+        *([f"            twitter: {xurl}"] if xurl else []),
         "            extra:",
+        *([f"              linkedin_url: {linkedin}"] if linkedin else []),
         "              annotations:",
         f"                presence: {PRESENCE.get(etype, 'hq')}",
         f"                city: {q(city)}",

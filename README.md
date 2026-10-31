@@ -18,6 +18,8 @@ See [MAINTAINING.md](MAINTAINING.md) for how changes go live, which files to tou
 | `settings.yml` | Branding, site colors, and the five map views (groups) |
 | `category-colors.json` | One header color per category |
 | `scripts/apply-category-colors.py` | Post-build step that applies `category-colors.json` |
+| `counter.yml` | GoatCounter site code for the cookie-free visit counter (empty: no counter) |
+| `scripts/add-counter.py` | Post-build step that adds the visit counter |
 | `scripts/polish-site.py` | Post-build design fixes: introduction, tile styling, item facts, guide width and empty-section notes |
 | `guide.yml` | Content for the Guide page |
 | `logos/` | Generated name images (not committed) |
@@ -55,6 +57,7 @@ python3 scripts/apply-category-colors.py build category-colors.json
 python3 scripts/make-feedback-page.py data.yml feedback.yml settings.yml build
 python3 scripts/add-feedback-menu.py build settings.yml
 python3 scripts/polish-site.py build data.yml guide.yml settings.yml
+python3 scripts/add-counter.py build counter.yml
 
 landscape2 serve --landscape-dir build
 ```

@@ -66,6 +66,18 @@ body:
     id: founded
     attributes:
       label: Year founded
+  - type: input
+    id: linkedin
+    attributes:
+      label: LinkedIn page
+      description: Only the organization's own page, as linked from its website. Leave empty if the website links none.
+      placeholder: https://www.linkedin.com/company/example
+  - type: input
+    id: x
+    attributes:
+      label: X account
+      description: Only the organization's own account, as linked from its website. Leave empty if the website links none.
+      placeholder: https://x.com/example
   - type: textarea
     id: evidence
     attributes:

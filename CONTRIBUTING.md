@@ -46,11 +46,12 @@ An entry goes on the landscape only when all three hold:
   description: "One plain sentence on what the product does. 200 characters maximum."
   homepage_url: https://example.com
   logo: example-co.svg     # file name only; the image is generated from the name
-  # Optional: show the entry in a second subcategory too.
+  twitter: https://x.com/exampleco   # optional; the organization's X account
+  # Optional: show the entry in a second subcategory too (see below).
   # second_path:
-  #   - "Applied AI / Health and life sciences"
+  #   - "Ecosystem enablers / Investors"
   extra:
-    linkedin_url: https://www.linkedin.com/company/example-co
+    linkedin_url: https://www.linkedin.com/company/example-co   # optional
     annotations:
       presence: hq            # hq | team | diaspora
       city: "Beirut"
@@ -60,6 +61,10 @@ An entry goes on the landscape only when all three hold:
 ```
 
 Place the entry in the one subcategory that best describes what the product does, not who buys it. Keep entries in alphabetical order within a subcategory.
+
+**Second placement.** An entry may appear in one more subcategory, through `second_path`, only when it does both things as a core activity: an accelerator that also runs a fund, for example. A Lebanese-founded-abroad entry is never placed in a Lebanon section. (Rule set 2026-10-31.)
+
+**LinkedIn and X.** Only the two accounts the organization itself links from its own website. Never a person's profile and never a parent organization's account. If the website links neither, leave both out; the entry is still listed. These are the only social links the landscape carries, to keep verification simple. (Rule set 2026-10-31.)
 
 ## Names, not logos
 

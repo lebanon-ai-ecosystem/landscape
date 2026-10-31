@@ -42,11 +42,18 @@ header:
   links:
     github: "https://github.com/lebanon-ai-ecosystem/landscape"
   logo: "assets/header-logo.svg"
+  # Banner above the header (markdown). Dismissible; it returns on the next
+  # visit. Soft-launch message, set 2026-10-31; remove or replace after the
+  # public launch (2027-01-26). The Feedback page mirrors it.
+  motd: "Soft launch: help us complete the map before the public launch on 26 January 2027. [Suggest an entry](https://lebanon-ai-ecosystem.github.io/landscape/feedback/)"
 
 footer:
   links:
     github: "https://github.com/lebanon-ai-ecosystem/landscape"
   logo: "assets/footer-logo.svg"
+  # Shown above "Powered by" (markdown). The Feedback page mirrors it.
+  # Absolute links: update them if the site moves to its own domain.
+  text: "A neutral community map of AI in Lebanon and across its diaspora. Listing is free and follows [published rules](https://lebanon-ai-ecosystem.github.io/landscape/guide#introduction--listing-rules). Data is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) and code under [Apache 2.0](https://github.com/lebanon-ai-ecosystem/landscape/blob/main/LICENSE). To suggest an entry or a correction, use the [Feedback page](https://lebanon-ai-ecosystem.github.io/landscape/feedback/)."
 
 groups:
   - name: "Full landscape"
