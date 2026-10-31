@@ -73,6 +73,17 @@ body:
       description: Links that show the criteria are met (product page, team in Lebanon, Lebanese founder, publications, portfolio).
     validations:
       required: true
+  - type: dropdown
+    id: relationship
+    attributes:
+      label: Your relationship to the organization
+      description: Maintainers never review entries for organizations they are tied to; we ask contributors the same question.
+      options:
+        - I work for this organization
+        - I advise or invest in this organization
+        - No relationship
+    validations:
+      required: true
   - type: checkboxes
     id: confirm
     attributes:

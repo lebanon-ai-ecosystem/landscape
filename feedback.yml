@@ -1,0 +1,8 @@
+# Settings for the Feedback page (scripts/make-feedback-page.py).
+#
+# web3forms_access_key: create it at https://web3forms.com with the inbox that
+# should receive submissions. The key is public by design: it only lets the
+# form send to that inbox and does not reveal the address. While it is empty,
+# the page offers the GitHub issue route only.
+web3forms_access_key: ""
+repository: lebanon-ai-ecosystem/landscape
