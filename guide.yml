@@ -113,14 +113,17 @@ categories:
 
       - subcategory: "How to get listed or corrected"
         content: |
-          There are two ways, both on GitHub. Each needs a free GitHub
-          account.
+          There are three ways:
 
-          1. **Issue:** fill in the
+          1. **Feedback page:** use the [Feedback](https://lebanon-ai-ecosystem.github.io/landscape/feedback/)
+             form at the top of every page. No account is needed. A
+             maintainer records each submission as a public issue, without
+             your name or email.
+          2. **Issue:** fill in the
              [Add or update an entry](https://github.com/lebanon-ai-ecosystem/landscape/issues/new?template=add-entry.yml)
              form. For a new entry, a maintainer's approval drafts the change
              automatically.
-          2. **Pull request:** edit `data.yml` in the
+          3. **Pull request:** edit `data.yml` in the
              [repository](https://github.com/lebanon-ai-ecosystem/landscape)
              and open a pull request.
 

@@ -78,6 +78,14 @@ jobs:
           cp build/downloads/lebanon-ai-ecosystem-slide.png build/docs/landscape.png
           cp build/downloads/lebanon-ai-ecosystem-slide.pdf build/docs/landscape.pdf
 
+      - name: Feedback page and menu item
+        # feedback/index.html from data.yml and feedback.yml, then FEEDBACK
+        # in the top menu. See scripts/make-feedback-page.py and
+        # scripts/add-feedback-menu.py.
+        run: |
+          python3 scripts/make-feedback-page.py data.yml feedback.yml settings.yml build
+          python3 scripts/add-feedback-menu.py build settings.yml
+
       - name: SPA fallback
         # Single-page app: unknown paths must serve the app.
         run: cp build/index.html build/404.html

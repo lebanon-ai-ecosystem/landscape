@@ -2,12 +2,13 @@
 
 Listing is free and follows the criteria below. Nobody pays for placement, and the same rules apply to every organization, including those the maintainers work for.
 
-## Two ways to submit
+## Three ways to submit
 
-1. **Pull request.** Add your entry to `data.yml`. No logo file is needed.
-2. **Issue.** Open a new issue with the ["Add or update an entry" form](https://github.com/lebanon-ai-ecosystem/landscape/issues/new?template=add-entry.yml). Write "Proposed subcategory" exactly as it appears on the map. When a maintainer approves a new entry, a workflow drafts the pull request and links it in the issue.
+1. **Feedback page.** Fill in the form at https://lebanon-ai-ecosystem.github.io/landscape/feedback/. No account needed. A maintainer records each submission as a public issue, without your name or email, and it follows the normal review.
+2. **Issue.** Open a new issue with the ["Add or update an entry" form](https://github.com/lebanon-ai-ecosystem/landscape/issues/new?template=add-entry.yml). Write "Proposed subcategory" exactly as it appears on the map. When a maintainer approves a new entry, a workflow drafts the pull request and links it in the issue. The Feedback page can open this form for you with your answers filled in.
+3. **Pull request.** Add your entry to `data.yml`. No logo file is needed.
 
-Both need a free GitHub account. Every change lands as a reviewed commit.
+Routes 2 and 3 need a free GitHub account. Every change lands as a reviewed commit.
 
 ## Who qualifies
 

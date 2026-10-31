@@ -39,6 +39,7 @@ Names must match exactly across files, including capitalization and punctuation.
 | Change the project name or header logo | `settings.yml` (`foundation`, `description`); `assets/header-logo.svg` and `assets/footer-logo.svg`; `guide.yml` introduction; README.md |
 | Change the favicon or link-preview image | Commit the new file in `assets/` first; then point `images` in `settings.yml` at that commit (the comment there explains why) |
 | Move to a custom domain | `settings.yml` (set `url`, delete `base_path`); then Settings, Pages, Custom domain |
+| Change the Feedback page or its settings | `scripts/make-feedback-page.py`; `feedback.yml` |
 | Change the 16:9 slide layout (which category goes in which column) | `scripts/make-slide.py` (`COLUMNS`) |
 | Upgrade landscape2 | `.github/workflows/build.yml` (`LANDSCAPE2_VERSION`) |
 
@@ -84,6 +85,18 @@ Pull requests opened by a workflow do not start other workflows, so the "build" 
 3. Close the public issue once the private conversation has started.
 4. Do not handle a report you are involved in, or that concerns an organization you work for, advise or invest in. Hand it to another maintainer.
 5. Delete the private repository when the report is closed, unless the reporter asks to keep it.
+
+## Feedback page submissions
+
+The Feedback page (`feedback/`, built by `scripts/make-feedback-page.py`) sends each submission by email through Web3Forms to the project inbox, or opens a prefilled GitHub issue for people with an account.
+
+For each emailed submission, within 7 days:
+
+1. Open a public issue with its content, using the "Add or update an entry" form for entries and a blank issue for general feedback. Leave out the sender's name and email. Credit the sender by name only if they ticked "Credit me by name".
+2. Add the `from-form` label, then review it like any other issue.
+3. If the sender left an email, reply with the issue link.
+
+Settings live in `feedback.yml`. The Web3Forms access key there is public by design: it only lets the form send to the project inbox. While the key is empty, the page offers the GitHub route only. The free Web3Forms plan allows 250 submissions a month and keeps 30 days of history.
 
 ## Undoing a change
 
