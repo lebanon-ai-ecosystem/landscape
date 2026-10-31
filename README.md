@@ -15,9 +15,10 @@ See [MAINTAINING.md](MAINTAINING.md) for how changes go live, which files to tou
 | Path | Purpose |
 | --- | --- |
 | `data.yml` | Every entry, organized by category and subcategory |
-| `settings.yml` | Branding, site colors, and the four map views (groups) |
+| `settings.yml` | Branding, site colors, and the five map views (groups) |
 | `category-colors.json` | One header color per category |
 | `scripts/apply-category-colors.py` | Post-build step that applies `category-colors.json` |
+| `scripts/polish-site.py` | Post-build design fixes: introduction, tile styling, item facts, guide width and empty-section notes |
 | `guide.yml` | Content for the Guide page |
 | `logos/` | Generated name images (not committed) |
 | `scripts/` | Name-image generator, category color patch, Inter font |
@@ -51,6 +52,9 @@ python3 scripts/generate-name-logos.py
 landscape2 build --data-file data.yml --settings-file settings.yml \
   --guide-file guide.yml --logos-path logos --output-dir build
 python3 scripts/apply-category-colors.py build category-colors.json
+python3 scripts/make-feedback-page.py data.yml feedback.yml settings.yml build
+python3 scripts/add-feedback-menu.py build settings.yml
+python3 scripts/polish-site.py build data.yml guide.yml settings.yml
 
 landscape2 serve --landscape-dir build
 ```
@@ -71,7 +75,6 @@ landscape2 alternates every category between two colors. `scripts/apply-category
 - [ ] If the org name differs from `lebanon-ai-ecosystem`, update it in `settings.yml` and this README
 - [ ] When a custom domain is ready: set it in `settings.yml` (`url`), delete `base_path`, and add it under Settings, Pages
 - [ ] Enable GitHub Pages with source set to GitHub Actions
-- [ ] Add a `LANDSCAPE_GITHUB_TOKENS` secret (comma-separated tokens, `public_repo` scope) to collect GitHub stats
 - [ ] Set the contact email in `CODE_OF_CONDUCT.md` and `CONTRIBUTING.md`
 - [ ] Remove each `Placeholder:` entry once its subcategory has a real one
 
